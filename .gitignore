@@ -32,3 +32,6 @@ Thumbs.db
 Thumbs.db.meta
 Images.meta
 Build/
+
+# Rider
+.idea/*
