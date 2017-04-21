@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Camera camera;
+    public Camera cam;
 	// Use this for initialization
 	void Start () {
 	}
@@ -14,6 +14,6 @@ public class CameraController : MonoBehaviour
 	{
 	    var newPos = gameObject.transform.position;
 	    newPos.y += 20;
-	    camera.transform.position = newPos;
+	    cam.transform.position = newPos;
 	}
 }

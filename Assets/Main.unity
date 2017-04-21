@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb8b917ca9cf46a7aad448335777cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 111767095}
+  cam: {fileID: 111767095}
 --- !u!4 &1198106336 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4697986226578946, guid: 9593b140bc9704ecdb89ccd325905afe,
