@@ -8,12 +8,15 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     public Camera cam;
+    public GameObject teddy;
 
     [Header("Settings")]
     public float Thrust = 2000;
     public float Epsilon = 0.1f;
     public float maxVelocity = 15f;
     public int velocity;
+
+    public Vector3 teddyDelta = new Vector3(0.98f,0.28f,0.52f);
 
     [Header("State")]
     public bool carryTeddy = false;
@@ -32,6 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         TurnLightOnOff();
         RotateToMouse();
+        CarryTeddy();
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
 
@@ -68,6 +72,23 @@ public class PlayerController : MonoBehaviour
 
 
 
+    }
+
+    private void CarryTeddy()
+    {
+        if (carryTeddy)
+        {
+            teddy.transform.SetParent(gameObject.transform);
+            teddy.transform.localPosition = teddyDelta;
+            teddy.transform.localRotation = Quaternion.Euler(new Vector3(0,90,0));
+            teddy.GetComponent<Rigidbody>().isKinematic = true;
+            teddy.GetComponentInChildren<Collider>().enabled = false;
+        }
+        else
+        {
+            teddy.GetComponent<Rigidbody>().isKinematic = false;
+            teddy.GetComponentInChildren<Collider>().enabled = true;
+        }
     }
 
     private void TurnLightOnOff()
