@@ -33,8 +33,16 @@ public class PlayerController : MonoBehaviour
         var x = Input.GetAxis("Horizontal");
         var y = Input.GetAxis("Vertical");
 
-
-
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x * speed, 0, y * speed);
+
+        RaycastHit hit;
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
+        {
+            var hitPoint = hit.point;
+            hitPoint.y = gameObject.transform.position.y;
+            gameObject.transform.LookAt(hitPoint);
+        }
+
     }
 }
