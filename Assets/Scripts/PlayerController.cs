@@ -16,12 +16,12 @@ public class PlayerController : MonoBehaviour
     public float Epsilon = 0.1f;
     public float maxVelocity = 15f;
     public int velocity;
+    public bool Panic = false;
 
     [Header("State")]
     public bool carryTeddy;
     public bool carryLight;
     public bool carryMatches;
-    public int panic = 0;
 
     // Use this for initialization
     void Start()
@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Panic)
+        {
+            return;
+        }
         TurnLightOnOff();
         RotateToMouse();
         CarryTeddy();
