@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    public String RequiredKey;
     public Vector3 RelativeRotationAxis = Vector3.zero;
     public bool ClockWise = true;
     private bool isOpen = false;
@@ -20,7 +22,7 @@ public class DoorController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.GetComponentInParent<PlayerController>())
+        if (other.gameObject.GetComponentInParent<KeyHolder>().MayOpen(RequiredKey))
         {
             ChangeState(true);
         }
