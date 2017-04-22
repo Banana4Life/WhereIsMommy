@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TeddyController : MonoBehaviour
+public class KeyController : MonoBehaviour
 {
+
+    public String keyName;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,7 +24,8 @@ public class TeddyController : MonoBehaviour
         if (playerController != null)
         {
             gameObject.SetActive(false);
-            playerController.carryTeddy = true;
+            var keyHolder = playerController.gameObject.GetComponent<SpecificKeyHolder>();
+            keyHolder.key = keyName;
             // TODO show StoryText
         }
     }
