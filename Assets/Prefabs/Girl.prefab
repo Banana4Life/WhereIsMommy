@@ -127,7 +127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1966998975797404
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,8 +217,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.26, y: 0.22, z: -28.33}
+  m_LocalRotation: {x: -0, y: 0.52914953, z: -0, w: 0.8485286}
+  m_LocalPosition: {x: -28.074293, y: -0.0000013113022, z: -27.009584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
@@ -325,7 +325,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1470888796700940}
-  m_Mesh: {fileID: 4300000, guid: 6ea92ddd8e7873c449311e19ab02ebfe, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 5a28606e6aab7dc47a03992429b8ac29, type: 3}
 --- !u!33 &33894580135352212
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -397,7 +397,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966998975797404}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -494,9 +494,9 @@ MonoBehaviour:
   maxVelocity: 10
   velocity: 0
   teddyDelta: {x: 0.98, y: 0.28, z: 0.52}
-  carryTeddy: 1
+  carryTeddy: 0
   panic: 0
-  frontlight: 1
+  frontlight: 0
 --- !u!114 &114601227292072094
 MonoBehaviour:
   m_ObjectHideFlags: 1
