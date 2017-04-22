@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33894580135352212}
   - component: {fileID: 23869808980879936}
   m_Layer: 0
-  m_Name: default
+  m_Name: TeddyModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4240050842975910}
   m_Layer: 0
-  m_Name: Torch
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 64686323027033208}
   - component: {fileID: 114601227292072094}
   m_Layer: 0
-  m_Name: default
+  m_Name: GirlModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4304972189090300}
   m_Layer: 9
-  m_Name: Flashlight
+  m_Name: CarriedFlashlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 33232014581523564}
   - component: {fileID: 23970626096889486}
   m_Layer: 0
-  m_Name: default
+  m_Name: FlashlightModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,8 +306,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_LocalRotation: {x: -0, y: 0.5187436, z: -0, w: 0.8549299}
-  m_LocalPosition: {x: -58.034603, y: -0.00000047683716, z: -30.693018}
+  m_LocalRotation: {x: 0, y: -0.96751094, z: 0, w: 0.25282934}
+  m_LocalPosition: {x: -21.53, y: 0.22, z: -21.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
