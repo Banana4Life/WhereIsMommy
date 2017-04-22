@@ -48,9 +48,9 @@ public class PanicController : MonoBehaviour
             if (PanicLevel > PanicThreshold)
             {
                 var navAgent = GetComponent<NavMeshAgent>();
-                navAgent.enabled = true;
                 playerCtrl.Panic = true;
                 navAgent.SetDestination(ReturnTo.transform.position);
+                navAgent.isStopped = false;
             }
         }
         else
@@ -58,9 +58,9 @@ public class PanicController : MonoBehaviour
             var navAgent = GetComponent<NavMeshAgent>();
             if (DidAgentReachDestination(navAgent))
             {
+                navAgent.isStopped = true;
                 Debug.LogWarning("Destination Fucked!");
                 playerCtrl.Panic = false;
-                navAgent.enabled = false;
                 PanicLevel = 0;
             }
         }
@@ -68,7 +68,9 @@ public class PanicController : MonoBehaviour
 
     private static bool DidAgentReachDestination(NavMeshAgent agent)
     {
-        return Vector3.Distance(agent.gameObject.transform.position, agent.destination) < 0.1f;
+        var distance = Vector3.Distance(agent.gameObject.transform.position, agent.destination);
+        Debug.Log("Distance to destination fucked: " + distance);
+        return distance <= agent.stoppingDistance;
     }
 
     private bool IsInLight(GameObject candle)

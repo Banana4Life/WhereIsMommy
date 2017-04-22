@@ -102,11 +102,11 @@ NavMeshSettings:
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
-    manualCellSize: 0
+    manualCellSize: 1
     cellSize: 0.57666665
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    accuratePlacement: 1
   m_NavMeshData: {fileID: 23800000, guid: d4d4cbf762fb07843bff7c694fb75a01, type: 2}
 --- !u!4 &12263398 stripped
 Transform:
@@ -240,27 +240,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4355633462697752, guid: 054429dc134a744dea88ce3bf4fe16c9,
     type: 2}
   m_PrefabInternal: {fileID: 75887400}
---- !u!1 &334207274 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1543958018676558, guid: 054429dc134a744dea88ce3bf4fe16c9,
-    type: 2}
-  m_PrefabInternal: {fileID: 75887400}
---- !u!114 &334207276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 334207274}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72d02227125694b9ba6f2dcee0c77c63, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
---- !u!4 &406528839 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4993067248525730, guid: 55bebe8d025f242e991552baedf88f02,
-    type: 2}
-  m_PrefabInternal: {fileID: 614561260}
 --- !u!1 &125105867 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1543958018676558, guid: 054429dc134a744dea88ce3bf4fe16c9,
@@ -275,8 +254,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72d02227125694b9ba6f2dcee0c77c63, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &449980290
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +440,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 676812400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.39, y: 0.89, z: -25.38}
+  m_LocalPosition: {x: -26.39, y: 0.99, z: -25.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -826,12 +805,12 @@ Prefab:
     - target: {fileID: 114996743791282218, guid: 008471434a13aea46a44e9de619a778b,
         type: 2}
       propertyPath: teddyText
-      value:
+      value: 
       objectReference: {fileID: 1401590153}
     - target: {fileID: 114996743791282218, guid: 008471434a13aea46a44e9de619a778b,
         type: 2}
       propertyPath: textHider
-      value:
+      value: 
       objectReference: {fileID: 1179880106}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 008471434a13aea46a44e9de619a778b, type: 2}
@@ -1002,8 +981,18 @@ Prefab:
     - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
         type: 2}
       propertyPath: ReturnTo
-      value:
+      value: 
       objectReference: {fileID: 676812400}
+    - target: {fileID: 195822284041204922, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195822284041204922, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
   m_IsPrefabParent: 0
