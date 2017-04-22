@@ -5,9 +5,6 @@ using UnityEngine.AI;
 
 public class MapGenerator : MonoBehaviour
 {
-    public GameObject tile;
-    public GameObject wall;
-
 	// Use this for initialization
 	void Start ()
 	{

@@ -6,6 +6,9 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
+    public int speed = 4;
+
+    public Camera cam;
     // Use this for initialization
     void Start()
     {
@@ -14,6 +17,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
@@ -24,5 +28,13 @@ public class PlayerController : MonoBehaviour
                 agent.SetDestination(hit.point);
             }
         }
+        */
+
+        var x = Input.GetAxis("Horizontal");
+        var y = Input.GetAxis("Vertical");
+
+
+
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x * speed, 0, y * speed);
     }
 }
