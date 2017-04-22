@@ -18,9 +18,9 @@ public class MapGenerator : MonoBehaviour
 	    var tileSize = tile.GetComponent<Renderer>().bounds.size;
 	    var dx = tileSize.x;
 	    var dy = tileSize.z;
-	    for (int x = 0; x < height; x++)
+	    for (int x = -height / 2; x < height/2; x++)
 	    {
-	        for (int y = 0; y < width; y++)
+	        for (int y = -width/2; y < width/2; y++)
 	        {
 	            var newTile = Instantiate(tile);
 	            newTile.transform.position = new Vector3(x * dx, 0, y * dy);

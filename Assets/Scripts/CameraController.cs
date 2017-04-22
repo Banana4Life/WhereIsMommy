@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Camera cam;
+
+    public int camHeight = 10;
 	// Use this for initialization
 	void Start () {
 	}
@@ -13,7 +15,7 @@ public class CameraController : MonoBehaviour
 	void Update ()
 	{
 	    var newPos = gameObject.transform.position;
-	    newPos.y += 20;
+	    newPos.y += camHeight;
 	    cam.transform.position = newPos;
 	}
 }
