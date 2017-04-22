@@ -48,6 +48,7 @@ public class PanicController : MonoBehaviour
             if (PanicLevel > PanicThreshold)
             {
                 var navAgent = GetComponent<NavMeshAgent>();
+                navAgent.enabled = true;
                 playerCtrl.Panic = true;
                 navAgent.SetDestination(ReturnTo.transform.position);
                 navAgent.isStopped = false;
@@ -59,6 +60,7 @@ public class PanicController : MonoBehaviour
             if (DidAgentReachDestination(navAgent))
             {
                 navAgent.isStopped = true;
+                navAgent.enabled = false;
                 Debug.LogWarning("Destination Fucked!");
                 playerCtrl.Panic = false;
                 PanicLevel = 0;

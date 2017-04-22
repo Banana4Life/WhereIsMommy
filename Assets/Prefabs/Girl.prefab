@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 23306015910235568}
   - component: {fileID: 64686323027033208}
   - component: {fileID: 114601227292072094}
+  - component: {fileID: 65395898259325036}
   m_Layer: 0
   m_Name: GirlModel
   m_TagString: Untagged
@@ -107,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1726594390719228
 GameObject:
   m_ObjectHideFlags: 1
@@ -176,7 +177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1966998975797404
 GameObject:
   m_ObjectHideFlags: 1
@@ -308,8 +309,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_LocalRotation: {x: 0, y: -0.96751094, z: 0, w: 0.25282934}
-  m_LocalPosition: {x: -21.53, y: 0.22, z: -21.61}
+  m_LocalRotation: {x: -0, y: -0.4155501, z: -0, w: 0.9095703}
+  m_LocalPosition: {x: -27.953201, y: 0.2164998, z: -28.804253}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
@@ -501,12 +502,24 @@ MeshCollider:
   m_GameObject: {fileID: 1470888796700940}
   m_Material: {fileID: 13400000, guid: 98bec862a1f1c0d4799112bf20ebc304, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6ea92ddd8e7873c449311e19ab02ebfe, type: 3}
+--- !u!65 &65395898259325036
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470888796700940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.44, y: 2.93, z: 1.98}
+  m_Center: {x: -0.20000269, y: 1.6, z: -0.0000038146973}
 --- !u!108 &108470103719238188
 Light:
   m_ObjectHideFlags: 1
@@ -601,8 +614,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 169a42fc03a8a7d41b73aec97f83508a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   PanicLevel: 0
   PanicThreshold: 300
   PanicIncrease: 10
@@ -626,10 +639,10 @@ MonoBehaviour:
   Thrust: 2000
   Epsilon: 0.1
   maxVelocity: 10
-  velocity: 0
+  velocity: 376
   Panic: 0
-  carryTeddy: 1
-  carryLight: 1
+  carryTeddy: 0
+  carryLight: 0
   carryMatches: 0
 --- !u!114 &114601227292072094
 MonoBehaviour:
@@ -662,10 +675,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key:
-  -
-  -
-  -
-  -
+  - 
+  - 
+  - 
+  - 
   - test
 --- !u!195 &195822284041204922
 NavMeshAgent:
@@ -673,14 +686,14 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.73
   m_Speed: 15
   m_Acceleration: 39
   avoidancePriority: 50
   m_AngularSpeed: 250
-  m_StoppingDistance: 3.57
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
