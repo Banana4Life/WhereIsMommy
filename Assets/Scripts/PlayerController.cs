@@ -7,9 +7,17 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    public int speed = 4;
-
     public Camera cam;
+
+    [Header("Settings")]
+    public float speed = 0.35f;
+
+    [Header("State")]
+    public bool carryTeddy = false;
+
+    public int panic = 0;
+
+
     // Use this for initialization
     void Start()
     {
@@ -18,6 +26,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        RaycastHit hit;
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
+        {
+            var hitPoint = hit.point;
+            hitPoint.y = gameObject.transform.position.y;
+            gameObject.transform.LookAt(hitPoint);
+        }
+
+
+        // else Girl runs in panic to the bed
         /*
         if (Input.GetMouseButton(0))
         {
@@ -31,27 +51,43 @@ public class PlayerController : MonoBehaviour
         }
         */
 
-        var x = Input.GetAxis("Horizontal");
-        var y = Input.GetAxis("Vertical");
 
-        if (Math.Abs(x) < 0.1)
-        {
-            x = 0;
-        }
-        if (Math.Abs(y) < 0.1)
-        {
-            y = 0;
-        }
-        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x * speed, 0, y * speed);
-
-        RaycastHit hit;
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
-        {
-            var hitPoint = hit.point;
-            hitPoint.y = gameObject.transform.position.y;
-            gameObject.transform.LookAt(hitPoint);
-        }
 
     }
+
+    void FixedUpdate()
+    {
+        if (panic < 100)
+        {
+            var x = Input.GetAxis("Horizontal");
+            var y = Input.GetAxis("Vertical");
+
+            if (Math.Abs(x) < 0.2)
+            {
+                x = 0;
+            }
+            if (Math.Abs(y) < 0.2)
+            {
+                y = 0;
+            }
+//            Debug.Log(x + ":" + y);
+
+//            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x * speed, 0, y * speed);
+            var targetPos = gameObject.transform.position + new Vector3(x, 0, y).normalized * speed;
+            //gameObject.GetComponent<Rigidbody>().MovePosition(targetPos);
+
+            var agent = gameObject.GetComponent<NavMeshAgent>();
+            if (x == 0 && y == 0)
+            {
+                agent.isStopped = true;
+            }
+            else
+            {
+                agent.isStopped = false;
+                agent.SetDestination(targetPos);
+            }
+
+        }
+    }
+
 }
