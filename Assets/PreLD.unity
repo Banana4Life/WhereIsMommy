@@ -287,8 +287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 1903753636535336, guid: ca46af396b97d4b02881738e9da62895, type: 2}
   wall: {fileID: 1664524534377708, guid: 9593b140bc9704ecdb89ccd325905afe, type: 2}
-  height: 5
-  width: 5
 --- !u!1 &1159920001 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1769689525244076, guid: 115dc1a652fc24adca1bc37ae8310b49,
