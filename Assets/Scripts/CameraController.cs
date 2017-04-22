@@ -6,7 +6,8 @@ public class CameraController : MonoBehaviour
 {
     public Camera cam;
 
-    public int camHeight = 10;
+    public Vector3 camOffset = new Vector3(0, 15, -5);
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -15,7 +16,7 @@ public class CameraController : MonoBehaviour
 	void Update ()
 	{
 	    var newPos = gameObject.transform.position;
-	    newPos.y += camHeight;
+	    newPos += camOffset;
 	    cam.transform.position = newPos;
 	}
 }

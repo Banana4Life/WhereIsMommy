@@ -6,13 +6,9 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    public Camera camera;
     // Use this for initialization
     void Start()
     {
-        var cameraController = gameObject.AddComponent<CameraController>();
-        cameraController.camHeight = 10;
-        cameraController.cam = camera;
     }
 
     // Update is called once per frame

@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 69d3fbfc1470c410bb31d8785c0a14cb
-timeCreated: 1492859363
+guid: d7e64dcb933fc40f798cf1bc3c80d540
+timeCreated: 1492860159
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Mesh1
+    100002: Mesh1_Model
     400000: //RootNode
-    400002: Mesh1
-    2300000: Mesh1
-    3300000: Mesh1
-    4300000: Mesh1
+    400002: Mesh1_Model
+    2300000: Mesh1_Model
+    3300000: Mesh1_Model
+    4300000: Mesh1_Model
   materials:
     importMaterials: 1
     materialName: 0
@@ -38,7 +38,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 250
+    globalScale: 3
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
