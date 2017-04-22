@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -33,6 +34,14 @@ public class PlayerController : MonoBehaviour
         var x = Input.GetAxis("Horizontal");
         var y = Input.GetAxis("Vertical");
 
+        if (Math.Abs(x) < 0.1)
+        {
+            x = 0;
+        }
+        if (Math.Abs(y) < 0.1)
+        {
+            y = 0;
+        }
         gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x * speed, 0, y * speed);
 
         RaycastHit hit;
