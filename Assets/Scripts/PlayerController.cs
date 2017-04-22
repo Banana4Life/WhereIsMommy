@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public Camera cam;
     public GameObject teddy;
+    public GameObject flashlight;
 
     [Header("Settings")]
     public float Thrust = 2000;
@@ -16,18 +17,16 @@ public class PlayerController : MonoBehaviour
     public float maxVelocity = 15f;
     public int velocity;
 
-    public Vector3 teddyDelta = new Vector3(0.98f,0.28f,0.52f);
-
     [Header("State")]
-    public bool carryTeddy = false;
-
+    public bool carryTeddy;
+    public bool carryLight;
     public int panic = 0;
-    public bool frontlight = true;
-
 
     // Use this for initialization
     void Start()
     {
+        carryTeddy = false;
+        carryLight = false;
     }
 
     // Update is called once per frame
@@ -77,18 +76,11 @@ public class PlayerController : MonoBehaviour
     private void CarryTeddy()
     {
         teddy.SetActive(carryTeddy);
-/*
-        teddy.transform.SetParent(gameObject.transform);
-        teddy.transform.localPosition = teddyDelta;
-        teddy.transform.localRotation = Quaternion.Euler(new Vector3(0,90,0));
-        teddy.GetComponent<Rigidbody>().isKinematic = true;
-        teddy.GetComponentInChildren<Collider>().enabled = false;
-*/
     }
 
     private void TurnLightOnOff()
     {
-        GameObject.Find("FrontLight").GetComponent<Light>().enabled = frontlight;
+        flashlight.SetActive(carryLight);
     }
 
     private void RotateToMouse()
