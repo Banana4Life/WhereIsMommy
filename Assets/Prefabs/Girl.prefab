@@ -217,8 +217,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_LocalRotation: {x: -0, y: 0.52914953, z: -0, w: 0.8485286}
-  m_LocalPosition: {x: -28.074293, y: -0.0000013113022, z: -27.009584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.26, y: 0.22, z: -28.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
@@ -512,6 +512,7 @@ MonoBehaviour:
   meshes:
   - {fileID: 4300000, guid: 6ea92ddd8e7873c449311e19ab02ebfe, type: 3}
   - {fileID: 4300000, guid: 5a28606e6aab7dc47a03992429b8ac29, type: 3}
+  - {fileID: 4300000, guid: 6ea92ddd8e7873c449311e19ab02ebfe, type: 3}
   - {fileID: 4300000, guid: 6f02bd24e4beff5478bc84c121ffdc59, type: 3}
   startOnAttach: 1
   v: {x: 0, y: 0, z: 0}
