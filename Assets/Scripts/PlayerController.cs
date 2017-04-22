@@ -76,19 +76,14 @@ public class PlayerController : MonoBehaviour
 
     private void CarryTeddy()
     {
-        if (carryTeddy)
-        {
-            teddy.transform.SetParent(gameObject.transform);
-            teddy.transform.localPosition = teddyDelta;
-            teddy.transform.localRotation = Quaternion.Euler(new Vector3(0,90,0));
-            teddy.GetComponent<Rigidbody>().isKinematic = true;
-            teddy.GetComponentInChildren<Collider>().enabled = false;
-        }
-        else
-        {
-            teddy.GetComponent<Rigidbody>().isKinematic = false;
-            teddy.GetComponentInChildren<Collider>().enabled = true;
-        }
+        teddy.SetActive(carryTeddy);
+/*
+        teddy.transform.SetParent(gameObject.transform);
+        teddy.transform.localPosition = teddyDelta;
+        teddy.transform.localRotation = Quaternion.Euler(new Vector3(0,90,0));
+        teddy.GetComponent<Rigidbody>().isKinematic = true;
+        teddy.GetComponentInChildren<Collider>().enabled = false;
+*/
     }
 
     private void TurnLightOnOff()
