@@ -25,7 +25,7 @@ public class KeyController : MonoBehaviour
         {
             gameObject.SetActive(false);
             var keyHolder = playerController.gameObject.GetComponent<SpecificKeyHolder>();
-            keyHolder.key = keyName;
+            keyHolder.key.Add(keyName);
             // TODO show StoryText
         }
     }

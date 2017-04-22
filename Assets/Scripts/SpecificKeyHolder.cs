@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class SpecificKeyHolder : KeyHolder
 {
-    public String key = null;
+    public List<string> key = new List<string>();
 
     public override bool MayOpen(string requiredKey)
     {
-        return requiredKey.Equals(key);
+        return key.Contains(requiredKey);
     }
 }
