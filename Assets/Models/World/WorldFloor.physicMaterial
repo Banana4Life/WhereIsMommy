@@ -6,7 +6,7 @@ PhysicMaterial:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: WorldFloor
-  dynamicFriction: 1.8
+  dynamicFriction: 1.5
   staticFriction: 0.25
   bounciness: 0
   frictionCombine: 0

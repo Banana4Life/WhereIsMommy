@@ -26,7 +26,7 @@ public class ModelCycler : MonoBehaviour
 	{
 	    var player = gameObject.transform.parent.transform.parent.gameObject;
 	    // TODO check player movement
-	    if (true)
+	    if (player.GetComponent<PlayerController>().velocity > 0)
 	    {
 	        StartCycling();
 	    }

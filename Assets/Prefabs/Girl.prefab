@@ -127,8 +127,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_LocalRotation: {x: -0, y: 0.43942252, z: -0, w: 0.8982805}
-  m_LocalPosition: {x: -24.033329, y: 0.51666737, z: -23.478092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -62.2, y: 2.48, z: -33.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
@@ -144,7 +144,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966998975797404}
   m_LocalRotation: {x: 0.13545617, y: 0, z: 0, w: 0.99078333}
-  m_LocalPosition: {x: -0, y: 0, z: 1}
+  m_LocalPosition: {x: 1.425, y: 2.249, z: 0.832}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4862397493011524}
@@ -329,8 +329,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  Thrust: 4000
+  Thrust: 2000
   Epsilon: 0.1
+  maxVelocity: 10
+  velocity: {x: 0, y: 0, z: 0}
   carryTeddy: 1
   panic: 0
 --- !u!114 &114601227292072094
@@ -342,11 +344,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff1e6681561d11f4cb0b80a66316ca3e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  modelDuration: 1e-10
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelDuration: 0.2
   meshes:
   - {fileID: 4300000, guid: 6ea92ddd8e7873c449311e19ab02ebfe, type: 3}
   - {fileID: 4300000, guid: 5a28606e6aab7dc47a03992429b8ac29, type: 3}
   - {fileID: 4300000, guid: 6f02bd24e4beff5478bc84c121ffdc59, type: 3}
   startOnAttach: 1
+  v: {x: 0, y: 0, z: 0}

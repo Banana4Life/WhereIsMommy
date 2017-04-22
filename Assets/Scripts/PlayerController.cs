@@ -12,11 +12,14 @@ public class PlayerController : MonoBehaviour
     [Header("Settings")]
     public float Thrust = 2000;
     public float Epsilon = 0.1f;
+    public float maxVelocity = 15f;
+    public int velocity;
 
     [Header("State")]
     public bool carryTeddy = false;
 
     public int panic = 0;
+    public bool frontlight = true;
 
 
     // Use this for initialization
@@ -27,14 +30,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TurnLightOnOff();
         RotateToMouse();
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
 
         var rb = GetComponent<Rigidbody>();
+        velocity = (int)rb.velocity.magnitude;
         if (Math.Abs(x) > Epsilon || Math.Abs(y) > Epsilon)
         {
-            rb.AddForce(new Vector3(x, 0, y).normalized * Thrust * Time.deltaTime);
+            if (velocity < maxVelocity)
+            {
+                rb.AddForce(new Vector3(x, 0, y).normalized * Thrust * Time.deltaTime);
+            }
+            // else ignore
         }
         else
         {
@@ -59,6 +68,11 @@ public class PlayerController : MonoBehaviour
 
 
 
+    }
+
+    private void TurnLightOnOff()
+    {
+        GameObject.Find("FrontLight").GetComponent<Light>().enabled = frontlight;
     }
 
     private void RotateToMouse()
