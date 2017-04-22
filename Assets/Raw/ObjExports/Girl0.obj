@@ -1,7 +1,7 @@
 # MagicaVoxel @ Ephtracy
 
 # material
-mtllib Girl.mtl
+mtllib Girl0.mtl
 usemtl palette
 
 # normals
