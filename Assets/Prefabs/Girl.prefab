@@ -107,7 +107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1726594390719228
 GameObject:
   m_ObjectHideFlags: 1
@@ -474,7 +474,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!54 &54059935170095346
 Rigidbody:
@@ -641,4 +641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4efac08b8fde54741858d5fbc5b9cb01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: test
+  key:
+  - 
+  - 
+  - 
+  - 

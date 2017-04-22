@@ -167,10 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2aa7bfc1b079e4d98bb321505a084c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequiredKey: test
+  RequiredKey: 
   RelativeRotationAxis: {x: 0, y: 0, z: 0}
   ClockWise: 0
-  RotationSpeed: 70
-  isOpen: 0
-  changing: 0
-  targetRotation: {x: 0, y: 0, z: 0, w: 0}
+  RotationSpeed: 225

@@ -31,6 +31,7 @@ public class DoorController : MonoBehaviour
         }
     }
 
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.GetComponentInParent<KeyHolder>().MayOpen(RequiredKey))

@@ -2,27 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlashlightController : MonoBehaviour {
+public class FlashlightController : CollisionController {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    private void OnCollisionEnter(Collision other)
+    protected override void handle(PlayerController playerController)
     {
-        var playerController = other.gameObject.GetComponentInParent<PlayerController>();
-
-        if (playerController != null)
-        {
-            gameObject.SetActive(false);
-            playerController.carryLight = true;
-            // TODO show StoryText
-        }
+        gameObject.SetActive(false);
+        playerController.carryLight = true;
+        // TODO show StoryText
     }
 }

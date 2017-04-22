@@ -2,31 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TeddyController : MonoBehaviour
+public class TeddyController : CollisionController
 {
     public GameObject teddyText;
     public GameObject textHider;
 
     private float teddyTextTimeLeft = 0;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
-
-    private void OnCollisionEnter(Collision other)
+    protected override void handle(PlayerController playerController)
     {
-        var playerController = other.gameObject.GetComponentInParent<PlayerController>();
-
-        if (playerController != null)
-        {
-            gameObject.SetActive(false);
-            playerController.carryTeddy = true;
-            textHider.GetComponent<TextHider>().HideTextIn(teddyText, 4f);
-            teddyText.SetActive(true);
-        }
+        gameObject.SetActive(false);
+        playerController.carryTeddy = true;
+        textHider.GetComponent<TextHider>().HideTextIn(teddyText, 4f);
+        teddyText.SetActive(true);
     }
 }

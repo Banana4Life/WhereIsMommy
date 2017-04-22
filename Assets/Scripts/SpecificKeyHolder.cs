@@ -9,6 +9,6 @@ public class SpecificKeyHolder : KeyHolder
 
     public override bool MayOpen(string requiredKey)
     {
-        return key.Contains(requiredKey);
+        return requiredKey.Length == 0 || key.Contains(requiredKey);
     }
 }

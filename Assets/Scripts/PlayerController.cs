@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [Header("State")]
     public bool carryTeddy;
     public bool carryLight;
+    public bool carryMatches;
     public int panic = 0;
 
     // Use this for initialization
