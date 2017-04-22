@@ -8,27 +8,10 @@ public class MapGenerator : MonoBehaviour
     public GameObject tile;
     public GameObject wall;
 
-    public int height = 5;
-    public int width = 5;
-
 	// Use this for initialization
 	void Start ()
 	{
-	    Debug.Log("Generating Terrain...");
-	    var tileSize = tile.GetComponent<Renderer>().bounds.size;
-	    var dx = tileSize.x;
-	    var dy = tileSize.z;
-	    for (int x = -height / 2; x < height/2; x++)
-	    {
-	        for (int y = -width/2; y < width/2; y++)
-	        {
-	            var newTile = Instantiate(tile);
-	            newTile.transform.position = new Vector3(x * dx, 0, y * dy);
-	            newTile.transform.parent = gameObject.transform;
-	            newTile.name = "Tile " + x + ":" + y;
-	        }
-	    }
-	    // Initialize & Build NavMesh
+	    // Build Navmesh for all tiles under gameObject
 	    var navMeshSurface = gameObject.AddComponent<NavMeshSurface>();
 	    navMeshSurface.BuildNavMesh();
 	}

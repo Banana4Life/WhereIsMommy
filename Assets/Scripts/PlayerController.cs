@@ -4,13 +4,15 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ClickMyTile : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    public GameObject tehPlayer;
-
+    public Camera camera;
     // Use this for initialization
     void Start()
     {
+        var cameraController = gameObject.AddComponent<CameraController>();
+        cameraController.camHeight = 10;
+        cameraController.cam = camera;
     }
 
     // Update is called once per frame
@@ -22,7 +24,7 @@ public class ClickMyTile : MonoBehaviour
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
             {
-                var agent = tehPlayer.GetComponent<NavMeshAgent>();
+                var agent = gameObject.GetComponent<NavMeshAgent>();
                 agent.SetDestination(hit.point);
             }
         }
