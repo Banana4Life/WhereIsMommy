@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 54006568454711906}
   - component: {fileID: 114082067899699048}
   - component: {fileID: 114250885029735736}
+  - component: {fileID: 114658449469104684}
   m_Layer: 9
   m_Name: Girl
   m_TagString: Untagged
@@ -523,9 +524,8 @@ MonoBehaviour:
   Epsilon: 0.1
   maxVelocity: 10
   velocity: 0
-  teddyDelta: {x: 0.98, y: 0.28, z: 0.52}
   carryTeddy: 1
-  frontlight: 1
+  carryLight: 0
   panic: 0
 --- !u!114 &114601227292072094
 MonoBehaviour:
@@ -546,3 +546,15 @@ MonoBehaviour:
   - {fileID: 4300000, guid: 6f02bd24e4beff5478bc84c121ffdc59, type: 3}
   startOnAttach: 1
   v: {x: 0, y: 0, z: 0}
+--- !u!114 &114658449469104684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1859773859419526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4efac08b8fde54741858d5fbc5b9cb01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: test
