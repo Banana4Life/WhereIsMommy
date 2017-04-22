@@ -10,6 +10,8 @@ public class ModelCycler : MonoBehaviour
     private int index;
     public bool startOnAttach = true;
 
+    public Vector3 v;
+
 	// Use this for initialization
 	void Start () {
 	    meshFilter = gameObject.GetComponent<MeshFilter>();
@@ -22,10 +24,11 @@ public class ModelCycler : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    var velocity = gameObject.transform.parent.transform.parent.gameObject.GetComponent<Rigidbody>().velocity;
-	    if (velocity.x > 0 || velocity.z > 0)
+	    var player = gameObject.transform.parent.transform.parent.gameObject;
+	    // TODO check player movement
+	    if (true)
 	    {
-            StartCycling();
+	        StartCycling();
 	    }
 	    else
 	    {
