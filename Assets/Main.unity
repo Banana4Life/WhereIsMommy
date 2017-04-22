@@ -156,6 +156,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &58592046 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1859773859419526, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059685127}
+--- !u!114 &58592050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 58592046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4efac08b8fde54741858d5fbc5b9cb01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
 --- !u!1001 &75887400
 Prefab:
   m_ObjectHideFlags: 0
@@ -873,6 +890,11 @@ Prefab:
         type: 2}
       propertyPath: ClockWise
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114918213298834582, guid: b19e26938c1923a4397b32180398269d,
+        type: 2}
+      propertyPath: RequiredKey
+      value: test
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65234976479676530, guid: b19e26938c1923a4397b32180398269d, type: 2}
