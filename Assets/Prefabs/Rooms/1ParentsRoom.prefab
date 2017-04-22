@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 108726914400408132}
   m_Layer: 0
   m_Name: Point light
-  m_TagString: Untagged
+  m_TagString: Candle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 108916618564171824}
   m_Layer: 0
   m_Name: Point light
-  m_TagString: Untagged
+  m_TagString: Candle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

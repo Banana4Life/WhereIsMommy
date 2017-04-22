@@ -21,12 +21,21 @@ public class PanicController : MonoBehaviour
     {
         var candles = GameObject.FindGameObjectsWithTag("Candle");
         var inDarkness = !candles.Any(IsInLight);
-        var hasFlashLight = GetComponent<PlayerController>().carryLight;
+        var playerCtrl = GetComponent<PlayerController>();
+        var hasFlashLight = playerCtrl.carryLight;
+        var hasTeddy = playerCtrl.carryTeddy;
 
         float increase;
         if (inDarkness)
         {
-            increase = hasFlashLight ? PanicIncrease : PanicIncreaseNoFlash;
+            if (!hasTeddy)
+            {
+                increase = float.MaxValue;
+            }
+            else
+            {
+                increase = hasFlashLight ? PanicIncrease : PanicIncreaseNoFlash;
+            }
         }
         else
         {
@@ -34,7 +43,6 @@ public class PanicController : MonoBehaviour
         }
         PanicLevel = Math.Max(PanicLevel + increase * Time.deltaTime, 0f);
 
-        var playerCtrl = GetComponent<PlayerController>();
         if (!playerCtrl.Panic)
         {
             if (PanicLevel > PanicThreshold)

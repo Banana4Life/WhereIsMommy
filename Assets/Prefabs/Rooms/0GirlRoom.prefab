@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 108511939929376744}
   m_Layer: 0
   m_Name: Point light
-  m_TagString: Untagged
+  m_TagString: Candle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,8 +485,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1122769847225280}
-  m_LocalRotation: {x: -0.14652795, y: 0.30248234, z: 0.5986022, w: -0.7271241}
-  m_LocalPosition: {x: -21.597809, y: -1.3125112, z: -17.527256}
+  m_LocalRotation: {x: -0.14666513, y: 0.3023593, z: 0.5985814, w: -0.72716475}
+  m_LocalPosition: {x: -21.597519, y: -1.3127053, z: -17.52773}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4503121790517784}
