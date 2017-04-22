@@ -204,20 +204,10 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1659018932}
-    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+    - target: {fileID: 114601227292072094, guid: 1c07278cd5d5249b7af2f5a1c846c058,
         type: 2}
-      propertyPath: carryTeddy
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: speed
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 195641901355987988, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: m_Speed
-      value: 10
+      propertyPath: modelDuration
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}

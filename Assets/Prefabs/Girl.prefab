@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 33823739267445888}
   - component: {fileID: 23306015910235568}
   - component: {fileID: 64686323027033208}
+  - component: {fileID: 114601227292072094}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -127,8 +128,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.3, y: 2.48, z: -31.6}
+  m_LocalRotation: {x: -0, y: 0.43942252, z: -0, w: 0.8982805}
+  m_LocalPosition: {x: -24.033329, y: 0.51666737, z: -23.478092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
@@ -332,6 +333,23 @@ MonoBehaviour:
   speed: 0.35
   carryTeddy: 1
   panic: 0
+--- !u!114 &114601227292072094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470888796700940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1e6681561d11f4cb0b80a66316ca3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelDuration: 1e-10
+  meshes:
+  - {fileID: 4300000, guid: 6ea92ddd8e7873c449311e19ab02ebfe, type: 3}
+  - {fileID: 4300000, guid: 5a28606e6aab7dc47a03992429b8ac29, type: 3}
+  - {fileID: 4300000, guid: 6f02bd24e4beff5478bc84c121ffdc59, type: 3}
+  startOnAttach: 1
 --- !u!195 &195641901355987988
 NavMeshAgent:
   m_ObjectHideFlags: 1

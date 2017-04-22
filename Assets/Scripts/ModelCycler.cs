@@ -20,8 +20,17 @@ public class ModelCycler : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+	    var velocity = gameObject.transform.parent.transform.parent.gameObject.GetComponent<Rigidbody>().velocity;
+	    if (velocity.x > 0 || velocity.z > 0)
+	    {
+            StartCycling();
+	    }
+	    else
+	    {
+	        StopCycling();
+	    }
 	}
 
     void Animate()
@@ -44,7 +53,7 @@ public class ModelCycler : MonoBehaviour
         }
     }
 
-    public void StopCyclign()
+    public void StopCycling()
     {
         CancelInvoke("Animate");
     }
