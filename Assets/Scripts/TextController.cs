@@ -21,7 +21,10 @@ public class TextController : MonoBehaviour
 
     public void HideTextIn(float time)
     {
-        Invoke("HideText", time);
+        if (!IsInvoking("HideText"))
+        {
+            Invoke("HideText", time);
+        }
     }
 
     private void HideText()

@@ -10,6 +10,7 @@ public class CarryScript : MonoBehaviour {
     public GameObject uvLight;
     public GameObject key1;
     public GameObject key2;
+    public GameObject key3;
 
     [Header("State")]
     public bool carryTeddy;
@@ -17,6 +18,7 @@ public class CarryScript : MonoBehaviour {
     public bool carryUvLight;
     public bool carryKey1;
     public bool carryKey2;
+    public bool carryKey3;
     public int carryMatches = 0;
 
 	// Use this for initialization
@@ -27,6 +29,7 @@ public class CarryScript : MonoBehaviour {
 	    carryUvLight = false;
 	    carryKey1 = false;
 	    carryKey2 = false;
+	    carryKey3 = false;
 	    carryMatches = 0;
 	}
 	
@@ -42,5 +45,6 @@ public class CarryScript : MonoBehaviour {
         uvLight.SetActive(carryUvLight);
         key1.SetActive(carryKey1);
         key2.SetActive(carryKey2);
+        key3.SetActive(carryKey3);
     }
 }

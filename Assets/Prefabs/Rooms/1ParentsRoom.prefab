@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4639521396886634}
   - component: {fileID: 33599381248502860}
   - component: {fileID: 23900894825692552}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 54237412532582664}
   - component: {fileID: 114471891349712814}
   - component: {fileID: 114650857130533568}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Candle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4670742021690472}
   - component: {fileID: 108283746589503264}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4410356724946884}
   - component: {fileID: 108993492259781698}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4852882116297364}
   - component: {fileID: 108726914400408132}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point light
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 54936616760462328}
   - component: {fileID: 114848747392212506}
   - component: {fileID: 114444208106539610}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Candle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 4956921327220214}
   - component: {fileID: 198498579062068804}
   - component: {fileID: 199986771420438408}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 33703384652269056}
   - component: {fileID: 23575479169845874}
   - component: {fileID: 64255639187011338}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ModelCandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4873076100240440}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Candle0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4025143413130032}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Candle0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 4980801213397168}
   - component: {fileID: 198616052813802858}
   - component: {fileID: 199022564569697780}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4058646701219884}
   - component: {fileID: 108916618564171824}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point light
   m_TagString: Candle
   m_Icon: {fileID: 0}
