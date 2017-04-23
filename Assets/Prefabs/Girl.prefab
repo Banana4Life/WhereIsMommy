@@ -296,7 +296,7 @@ Transform:
   m_GameObject: {fileID: 1714177456997804}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.735, y: 0.299, z: 0.553}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4991494324710420}
   m_Father: {fileID: 4862397493011524}
@@ -336,7 +336,7 @@ Transform:
   m_GameObject: {fileID: 1968217847676562}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.7349996, y: 0.299, z: 0.5529993}
-  m_LocalScale: {x: 0.5000006, y: 0.5, z: 0.5000006}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4882787461530162}
   m_Father: {fileID: 4862397493011524}
@@ -457,8 +457,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_LocalRotation: {x: 0, y: -0.96751094, z: 0, w: 0.25282934}
-  m_LocalPosition: {x: -21.53, y: 0.22, z: -21.61}
+  m_LocalRotation: {x: -0, y: 0.53184175, z: -0, w: 0.8468438}
+  m_LocalPosition: {x: -96.7561, y: -0.0000009536743, z: -34.557854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  camOffset: {x: 0, y: 15, z: -5}
+  camOffset: {x: -2.03, y: 15, z: -5.7}
 --- !u!114 &114086110393262488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -881,10 +881,10 @@ MonoBehaviour:
   flashlight: {fileID: 1602798240538980}
   key1: {fileID: 1714177456997804}
   key2: {fileID: 1968217847676562}
-  carryTeddy: 0
-  carryLight: 0
-  carryKey1: 0
-  carryKey2: 0
+  carryTeddy: 1
+  carryLight: 1
+  carryKey1: 1
+  carryKey2: 1
   carryMatches: 0
 --- !u!114 &114250885029735736
 MonoBehaviour:
@@ -940,13 +940,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key:
   - Key1
+  - Key2
 --- !u!195 &195822284041204922
 NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 1.73
   m_Speed: 15
