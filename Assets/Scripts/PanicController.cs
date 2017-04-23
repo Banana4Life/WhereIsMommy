@@ -95,8 +95,7 @@ public class PanicController : MonoBehaviour
         if (distance <= range)
         {
             RaycastHit hit;
-            Physics.Raycast(candle.transform.position, direction, out hit, distance);
-            if (hit.collider == null)
+            if (!Physics.Raycast(candle.transform.position, direction, out hit, distance))
             {
                 return false;
             }
