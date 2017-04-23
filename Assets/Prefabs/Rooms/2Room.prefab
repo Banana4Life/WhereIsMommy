@@ -69,10 +69,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4973622972205244}
-  - component: {fileID: 114456071958750184}
   - component: {fileID: 54541050743058320}
   - component: {fileID: 64241839743719450}
   - component: {fileID: 208633978289267646}
+  - component: {fileID: 114456071958750184}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2aa7bfc1b079e4d98bb321505a084c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textController: {fileID: 0}
   RequiredKey: Key1
   RelativeRotationAxis: {x: 0, y: 0, z: 0}
   ClockWise: 0
