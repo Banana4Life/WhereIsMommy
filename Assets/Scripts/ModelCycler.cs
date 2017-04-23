@@ -9,8 +9,12 @@ public class ModelCycler : MonoBehaviour
     private MeshFilter meshFilter;
     private int index;
     public bool startOnAttach = true;
+    public float MinDelay = 1f;
+    public float MaxDelay = 2f;
+    public float Speed = 0f;
+    private float delayUntilNext = 0f;
 
-    public Vector3 v;
+    private bool cycling = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,31 +24,37 @@ public class ModelCycler : MonoBehaviour
 	        StartCycling();
 	    }
 	}
+
+    private float calculateNextDelay()
+    {
+        return MinDelay + (MaxDelay - MinDelay) * (1f - Speed);
+    }
 	
 	// Update is called once per frame
 	void Update ()
 	{
-	    var player = gameObject.transform.parent.transform.parent.gameObject;
-	    // TODO check player movement
-	    if (player.GetComponent<PlayerController>().velocity > 0)
+	    if (cycling)
 	    {
-	        StartCycling();
-	    }
-	    else
-	    {
-	        StopCycling();
+	        if (delayUntilNext <= 0)
+	        {
+	            index = (index + 1) % meshes.Count;
+	            meshFilter.mesh = meshes[index];
+	            delayUntilNext = calculateNextDelay();
+	        }
+	        else
+	        {
+	            delayUntilNext -= Time.deltaTime;
+	        }
 	    }
 	}
 
     void Animate()
     {
-        meshFilter.mesh = meshes[index];
-        index = (index + 1) % meshes.Count;
     }
 
     public bool IsCycling()
     {
-        return IsInvoking("Animate");
+        return cycling;
     }
 
     public void StartCycling(int startIndex = 0)
@@ -52,12 +62,13 @@ public class ModelCycler : MonoBehaviour
         if (!IsCycling())
         {
             index = startIndex;
-            InvokeRepeating("Animate", 0, modelDuration);
+            delayUntilNext = calculateNextDelay();
+            cycling = true;
         }
     }
 
     public void StopCycling()
     {
-        CancelInvoke("Animate");
+        cycling = false;
     }
 }
