@@ -29,8 +29,8 @@ public class TextController : MonoBehaviour
         textObject.SetActive(false);
     }
 
-    public static TextController get()
+    public static TextController Get()
     {
-        
+        return GameObject.Find("TextController").GetComponent<TextController>();
     }
 }
