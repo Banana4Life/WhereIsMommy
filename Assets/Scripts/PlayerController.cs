@@ -4,11 +4,10 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(CarryScript))]
 public class PlayerController : MonoBehaviour
 {
     public Camera cam;
-    public GameObject teddy;
-    public GameObject flashlight;
 
     [Header("Settings")]
     public float Thrust = 2000;
@@ -18,14 +17,10 @@ public class PlayerController : MonoBehaviour
     public int velocity;
     public bool Panic = false;
 
-    [Header("State")]
-    public bool carryTeddy;
-    public bool carryLight;
-    public int carryMatches = 0;
-
     private ModelCycler modelCycler;
     private Rigidbody rigidBody;
     private NavMeshAgent navAgent;
+    private CarryScript carry;
 
     public bool forceMovement;
     public bool sugarRush;
@@ -34,12 +29,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         forceMovement = false;
-        carryTeddy = false;
-        carryLight = false;
-        carryMatches = 0;
         modelCycler = GetComponentInChildren<ModelCycler>();
         rigidBody = GetComponent<Rigidbody>();
         navAgent = GetComponent<NavMeshAgent>();
+        carry = GetComponent<CarryScript>();
+    }
+
+    public CarryScript Carry()
+    {
+        return carry;
     }
 
     // Update is called once per frame
@@ -47,9 +45,6 @@ public class PlayerController : MonoBehaviour
     {
         UpdateInternalVelocity();
         UpdateAnimationSpeed();
-
-        TurnLightOnOff();
-        CarryTeddy();
 
         if (!forceMovement)
         {
@@ -91,16 +86,6 @@ public class PlayerController : MonoBehaviour
     private void UpdateInternalVelocity()
     {
         velocity = (int)Math.Max(rigidBody.velocity.magnitude, navAgent.velocity.magnitude);
-    }
-
-    private void CarryTeddy()
-    {
-        teddy.SetActive(carryTeddy);
-    }
-
-    private void TurnLightOnOff()
-    {
-        flashlight.SetActive(carryLight);
     }
 
     private void RotateToMouse()

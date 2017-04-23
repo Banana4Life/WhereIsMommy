@@ -22,8 +22,8 @@ public class PanicController : MonoBehaviour
         var candles = GameObject.FindGameObjectsWithTag("Candle");
         var inDarkness = !candles.Any(IsInLight);
         var playerCtrl = GetComponent<PlayerController>();
-        var hasFlashLight = playerCtrl.carryLight;
-        var hasTeddy = playerCtrl.carryTeddy;
+        var hasFlashLight = playerCtrl.Carry().carryLight;
+        var hasTeddy = playerCtrl.Carry().carryTeddy;
 
         float increase;
         if (inDarkness)

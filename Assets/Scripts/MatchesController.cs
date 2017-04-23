@@ -8,7 +8,7 @@ public class MatchesController : CollisionController
     protected override void handle(PlayerController playerController)
     {
         gameObject.SetActive(false);
-        playerController.carryMatches += amount;
+        playerController.Carry().carryMatches += amount;
         TextController.Get().ShowText("LET EVERYTHING BURN!!!!!!11", Color.red, 4f);
     }
 }

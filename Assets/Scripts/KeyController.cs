@@ -12,6 +12,16 @@ public class KeyController : CollisionController
         gameObject.SetActive(false);
         var keyHolder = playerController.gameObject.GetComponent<SpecificKeyHolder>();
         keyHolder.key.Add(keyName);
+        switch (keyName)
+        {
+            case "Key1":
+                playerController.Carry().carryKey1 = true;
+                break;
+            case "Key2":
+                playerController.Carry().carryKey2 = true;
+                break;
+        }
+
         TextController.Get().ShowText("I found a key!", Color.red, 4f);
     }
 }

@@ -25,9 +25,9 @@ public class CandleController : CollisionController
     {
         if (!lit)
         {
-            if (playerController.carryMatches > 0)
+            if (playerController.Carry().carryMatches > 0)
             {
-                playerController.carryMatches--;
+                playerController.Carry().carryMatches--;
                 lit = true;
                 UpdateLight();
                 TextController.Get().ShowText("Finally some light!", Color.red, 4f);

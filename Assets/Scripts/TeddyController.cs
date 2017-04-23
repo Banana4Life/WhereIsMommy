@@ -14,6 +14,6 @@ public class TeddyController : CollisionController
     {
         gameObject.SetActive(false);
         TextController.Get().ShowText(text, color, 4f);
-        playerController.carryTeddy = true;
+        playerController.Carry().carryTeddy = true;
     }
 }
