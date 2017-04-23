@@ -107,7 +107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1726594390719228
 GameObject:
   m_ObjectHideFlags: 1
@@ -176,7 +176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1966998975797404
 GameObject:
   m_ObjectHideFlags: 1
@@ -308,8 +308,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_LocalRotation: {x: 0, y: -0.96751094, z: 0, w: 0.25282934}
-  m_LocalPosition: {x: -21.53, y: 0.22, z: -21.61}
+  m_LocalRotation: {x: -0, y: 0.8025843, z: -0, w: 0.5965388}
+  m_LocalPosition: {x: -23.24456, y: -0.0000013113022, z: -23.607353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
@@ -455,7 +455,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1470888796700940}
-  m_Mesh: {fileID: 4300000, guid: 6ea92ddd8e7873c449311e19ab02ebfe, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 6f02bd24e4beff5478bc84c121ffdc59, type: 3}
 --- !u!33 &33894580135352212
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169a42fc03a8a7d41b73aec97f83508a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanicLevel: 28.432568
+  PanicLevel: 0
   PanicThreshold: 300
   PanicIncrease: 10
   PanicIncreaseNoFlash: 150
@@ -628,8 +628,8 @@ MonoBehaviour:
   maxVelocity: 10
   velocity: 0
   Panic: 0
-  carryTeddy: 1
-  carryLight: 1
+  carryTeddy: 0
+  carryLight: 0
   carryMatches: 0
 --- !u!114 &114601227292072094
 MonoBehaviour:
@@ -649,7 +649,9 @@ MonoBehaviour:
   - {fileID: 4300000, guid: 6ea92ddd8e7873c449311e19ab02ebfe, type: 3}
   - {fileID: 4300000, guid: 6f02bd24e4beff5478bc84c121ffdc59, type: 3}
   startOnAttach: 1
-  v: {x: 0, y: 0, z: 0}
+  MinDelay: 0.03
+  MaxDelay: 0.15
+  Speed: 0
 --- !u!114 &114658449469104684
 MonoBehaviour:
   m_ObjectHideFlags: 1
