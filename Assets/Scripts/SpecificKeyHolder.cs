@@ -5,7 +5,12 @@ using UnityEngine;
 
 public class SpecificKeyHolder : KeyHolder
 {
-    public List<string> key = new List<string>();
+    public List<string> key;
+
+    private void Start()
+    {
+        key = new List<string>();
+    }
 
     public override bool MayOpen(string requiredKey)
     {
