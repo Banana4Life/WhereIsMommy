@@ -11,7 +11,6 @@ public class IntroScript : MonoBehaviour
 
     public float blendSpeed;
     public float speed;
-    public GameObject momTalking;
     public GameObject blend;
     public GameObject later;
 
@@ -40,14 +39,10 @@ public class IntroScript : MonoBehaviour
 	            }
 	            break;
             case IntroState.MotherTalking:
+                TextController.Get().ShowText("Do not leave the room. We are back soon.", Color.red, 3f);
                 timeLeft -= Time.deltaTime;
-                if (timeLeft > 0)
+                if (timeLeft <= 0)
                 {
-                    momTalking.SetActive(true);
-                }
-                else
-                {
-                    momTalking.SetActive(false);
                     state = IntroState.MotherWalkingOut;
                 }
                 break;
