@@ -930,8 +930,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9e1aec1d72b4ecd82c42f55d602090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teddyText: {fileID: 0}
-  textHider: {fileID: 0}
+  textController: {fileID: 0}
+  text: Now I have my teddy. I am ready to go.
+  color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!208 &208496539477545006
 NavMeshObstacle:
   m_ObjectHideFlags: 1

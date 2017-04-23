@@ -33,7 +33,6 @@ public class PanicController : MonoBehaviour
             if (!hasTeddy)
             {
                 increase = float.MaxValue;
-                // TODO show text need mah Teddy
             }
             else
             {
@@ -50,6 +49,15 @@ public class PanicController : MonoBehaviour
         {
             if (PanicLevel > PanicThreshold)
             {
+                if (hasTeddy)
+                {
+                    textController.GetComponent<TextController>().ShowText("I am sure I saw something move in the dark!", Color.red, 4f);
+                }
+                else
+                {
+                    textController.GetComponent<TextController>().ShowText("It's too dark. I need my Teddy!", Color.red, 4f);
+                }
+
                 var navAgent = GetComponent<NavMeshAgent>();
                 navAgent.enabled = true;
                 playerCtrl.Panic = true;

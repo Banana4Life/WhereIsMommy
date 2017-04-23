@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class FlashlightController : CollisionController {
 
+    public GameObject textController;
+
     protected override void handle(PlayerController playerController)
     {
         gameObject.SetActive(false);
         playerController.carryLight = true;
-        // TODO show StoryText
+        textController.GetComponent<TextController>().ShowText("Just a little more light! I hope the batteries don't run out.", Color.red, 4f);
     }
 }

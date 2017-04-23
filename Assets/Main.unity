@@ -185,6 +185,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114270200572757068, guid: 7e9b1573c6cbc764e992e3a9859df638,
+        type: 2}
+      propertyPath: textController
+      value: 
+      objectReference: {fileID: 1179880106}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e9b1573c6cbc764e992e3a9859df638, type: 2}
   m_IsPrefabParent: 0
@@ -359,7 +364,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 648355838}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -770,19 +775,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114996743791282218, guid: 008471434a13aea46a44e9de619a778b,
         type: 2}
-      propertyPath: teddyText
-      value: 
-      objectReference: {fileID: 1401590153}
-    - target: {fileID: 114996743791282218, guid: 008471434a13aea46a44e9de619a778b,
-        type: 2}
-      propertyPath: textHider
+      propertyPath: textController
       value: 
       objectReference: {fileID: 1179880106}
-    - target: {fileID: 114996743791282218, guid: 008471434a13aea46a44e9de619a778b,
-        type: 2}
-      propertyPath: textObject
-      value: 
-      objectReference: {fileID: 1401590153}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 008471434a13aea46a44e9de619a778b, type: 2}
   m_IsPrefabParent: 0
