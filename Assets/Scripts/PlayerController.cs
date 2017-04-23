@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = System.Random;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(NavMeshAgent))]
@@ -17,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public int velocity;
     public bool Panic = false;
 
+    public List<char> kombination = new List<char> {'A', 'B', 'C'};
+
     private ModelCycler modelCycler;
     private Rigidbody rigidBody;
     private NavMeshAgent navAgent;
@@ -28,11 +34,25 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        var rand = new Random();
+        kombination.OrderBy(a => rand.Next(100));
+        int i = 0;
+        foreach (var btn in GameObject.FindGameObjectsWithTag("Button"))
+        {
+            i++;
+            var buttonController = btn.GetComponent<ButtonController>();
+            buttonController.setButtonLetter(kombination[i]);
+        }
         forceMovement = false;
         modelCycler = GetComponentInChildren<ModelCycler>();
         rigidBody = GetComponent<Rigidbody>();
         navAgent = GetComponent<NavMeshAgent>();
         carry = GetComponent<CarryScript>();
+    }
+
+    public void OnButtonPress(char letter)
+    {
+        // TODO
     }
 
     public CarryScript Carry()
