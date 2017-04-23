@@ -9,8 +9,6 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PanicController : MonoBehaviour
 {
-    public GameObject textController;
-
     public float PanicLevel;
     public float PanicThreshold = 300;
     public float PanicIncrease = 10;
@@ -51,11 +49,11 @@ public class PanicController : MonoBehaviour
             {
                 if (hasTeddy)
                 {
-                    textController.GetComponent<TextController>().ShowText("I am sure I saw something move in the dark!", Color.red, 4f);
+                    TextController.Get().ShowText("I am sure I saw something move in the dark!", Color.red, 4f);
                 }
                 else
                 {
-                    textController.GetComponent<TextController>().ShowText("It's too dark. I need my Teddy!", Color.red, 4f);
+                    TextController.Get().ShowText("It's too dark. I need my Teddy!", Color.red, 4f);
                 }
 
                 var navAgent = GetComponent<NavMeshAgent>();

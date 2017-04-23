@@ -28,4 +28,9 @@ public class TextController : MonoBehaviour
     {
         textObject.SetActive(false);
     }
+
+    public static TextController get()
+    {
+        
+    }
 }

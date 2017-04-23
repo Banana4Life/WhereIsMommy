@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class TeddyController : CollisionController
 {
-    public GameObject textController;
-
     public string text = "Now I have my teddy. I am ready to go.";
     public Color color = Color.red; // TODO?
 
@@ -15,7 +13,7 @@ public class TeddyController : CollisionController
     protected override void handle(PlayerController playerController)
     {
         gameObject.SetActive(false);
-        textController.GetComponent<TextController>().ShowText(text, color, 4f);
+        TextController.Get().ShowText(text, color, 4f);
         playerController.carryTeddy = true;
     }
 }

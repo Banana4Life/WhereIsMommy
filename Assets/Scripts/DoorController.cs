@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public GameObject textController;
-
     public String RequiredKey;
     public Vector3 RelativeRotationAxis = Vector3.zero;
     public bool ClockWise = true;
@@ -42,12 +40,12 @@ public class DoorController : MonoBehaviour
             ChangeState(true);
             if (RequiredKey.Length != 0)
             {
-                textController.GetComponent<TextController>().ShowText("The key works!", Color.red, 4f);
+                TextController.Get().ShowText("The key works!", Color.red, 4f);
             }
         }
         else
         {
-            textController.GetComponent<TextController>().ShowText("It's locked!", Color.red, 4f);
+            TextController.Get().ShowText("It's locked!", Color.red, 4f);
         }
     }
 
