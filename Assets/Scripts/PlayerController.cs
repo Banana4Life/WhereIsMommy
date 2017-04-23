@@ -26,9 +26,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rigidBody;
     private NavMeshAgent navAgent;
 
+    public bool forceMovement;
+
     // Use this for initialization
     void Start()
     {
+        forceMovement = false;
         carryTeddy = false;
         carryLight = false;
         carryMatches = 0;
@@ -46,7 +49,7 @@ public class PlayerController : MonoBehaviour
         TurnLightOnOff();
         CarryTeddy();
 
-        if (!Panic)
+        if (!forceMovement)
         {
             RotateToMouse();
 
@@ -108,6 +111,21 @@ public class PlayerController : MonoBehaviour
             hitPoint.y = gameObject.transform.position.y;
             gameObject.transform.LookAt(hitPoint);
         }
+    }
+
+    public void StopForceMovement()
+    {
+        forceMovement = false;
+        navAgent.isStopped = true;
+        navAgent.enabled = false;
+    }
+
+    public void ForceMovement(Vector3 target)
+    {
+        forceMovement = true;
+        navAgent.enabled = true;
+        navAgent.SetDestination(target);
+        navAgent.isStopped = false;
     }
 
 }

@@ -55,12 +55,8 @@ public class PanicController : MonoBehaviour
                 {
                     TextController.Get().ShowText("It's too dark. I need my Teddy!", Color.red, 4f);
                 }
-
-                var navAgent = GetComponent<NavMeshAgent>();
-                navAgent.enabled = true;
+                playerCtrl.ForceMovement(ReturnTo.transform.position);
                 playerCtrl.Panic = true;
-                navAgent.SetDestination(ReturnTo.transform.position);
-                navAgent.isStopped = false;
             }
         }
         else
@@ -68,8 +64,8 @@ public class PanicController : MonoBehaviour
             var navAgent = GetComponent<NavMeshAgent>();
             if (DidAgentReachDestination(navAgent))
             {
-                navAgent.isStopped = true;
-                navAgent.enabled = false;
+                playerCtrl.StopForceMovement();
+
                 playerCtrl.Panic = false;
                 PanicLevel = 0;
             }
