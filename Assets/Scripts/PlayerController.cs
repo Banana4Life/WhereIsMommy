@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         carryTeddy = false;
         carryLight = false;
+        carryMatches = 0;
     }
 
     // Update is called once per frame
