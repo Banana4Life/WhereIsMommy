@@ -9,6 +9,6 @@ public class MatchesController : CollisionController
     {
         gameObject.SetActive(false);
         playerController.Carry().carryMatches += amount;
-        TextController.Get().ShowText("LET EVERYTHING BURN!!!!!!11", Color.red, 4f);
+        TextController.Get().ShowText("Now I can light a candle", Color.red, 4f);
     }
 }

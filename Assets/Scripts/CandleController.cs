@@ -40,7 +40,12 @@ public class CandleController : CollisionController
         if (lit)
         {
             GameObject.Find("SafePoint").transform.position = gameObject.transform.position;
-            Debug.Log("Safepoint set");
+            if (playerController.Panic)
+            {
+                playerController.Panic = false;
+                playerController.StopForceMovement();
+                playerController.GetComponent<PanicController>().PanicLevel = 0;
+            }
         }
     }
 }
