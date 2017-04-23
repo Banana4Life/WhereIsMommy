@@ -885,6 +885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648355840}
   - component: {fileID: 648355839}
+  - component: {fileID: 648355841}
   m_Layer: 0
   m_Name: Full Light
   m_TagString: Untagged
@@ -898,7 +899,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 648355838}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -941,6 +942,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &648355841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 648355838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bc14503495043e697b231e5976d15d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &652500277
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,7 +2224,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: dd03e608cad92164a92af2a7777de19f, type: 3}
