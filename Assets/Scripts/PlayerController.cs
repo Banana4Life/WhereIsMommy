@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public int velocity;
     public bool Panic = false;
 
-    public List<char> kombination = new List<char> {'A', 'B', 'C'};
+    public List<char> combination;
     public int buttonsPressed = 0;
 
     private ModelCycler modelCycler;
@@ -32,14 +32,14 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        var rand = new Random();
-        kombination.OrderBy(a => rand.Next(100));
+        var rand = new Random(DateTime.Now.Millisecond);
+        combination = new List<char> {'A', 'B', 'C'}.OrderBy(a => rand.Next()).ToList();
         int i = 0;
         foreach (var btn in GameObject.FindGameObjectsWithTag("Button"))
         {
             i++;
             var buttonController = btn.GetComponent<ButtonController>();
-            buttonController.SetButtonLetter(kombination[i]);
+            buttonController.SetButtonLetter(combination[i]);
         }
         forceMovement = false;
         buttonsPressed = 0;
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     public bool OnButtonPress(char letter)
     {
-        if (kombination[buttonsPressed] == letter)
+        if (combination[buttonsPressed] == letter)
         {
             buttonsPressed++;
             if (buttonsPressed == 3)

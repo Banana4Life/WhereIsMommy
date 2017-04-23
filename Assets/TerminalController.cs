@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ public class TerminalController : CollisionController {
 
     protected override void handle(PlayerController pc)
     {
-        TextController.Get().ShowText("It reads: C B A", Color.red, 10f);
+        TextController.Get().ShowText("It reads: " + pc.combination[0] + " "
+                                                   + pc.combination[1] + " "
+                                                   + pc.combination[2], Color.red, 10f);
     }
 }
