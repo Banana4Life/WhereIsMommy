@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,8 +10,6 @@ using Random = System.Random;
 [RequireComponent(typeof(CarryScript))]
 public class PlayerController : MonoBehaviour
 {
-    public Camera cam;
-
     [Header("Settings")]
     public float Thrust = 2000;
     public float Epsilon = 0.1f;
