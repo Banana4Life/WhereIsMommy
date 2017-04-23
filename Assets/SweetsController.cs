@@ -21,13 +21,22 @@ public class SweetsController : CollisionController
     {
         playerController.ForceMovement(gameObject.transform.position);
         pc = playerController;
-        TextController.Get().ShowText("Mhhm. Sweets!", Color.red, 5f);
-        Invoke("StopEating", 5f);
+        TextController.Get().ShowText("Mhhm. Sweets!", Color.red, 2f);
+        Invoke("StopEating", 2f);
     }
 
     private void StopEating()
     {
         pc.StopForceMovement();
         gameObject.SetActive(false);
+        Invoke("StopSugarRush", 10f);
+        pc.sugarRush = true;
     }
+
+    private void StopSugarRush()
+    {
+        pc.sugarRush = false;
+    }
+
+
 }

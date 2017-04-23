@@ -37,11 +37,11 @@ public class DoorController : MonoBehaviour
         var keyHolder = other.gameObject.GetComponentInParent<KeyHolder>();
         if (keyHolder.MayOpen(RequiredKey))
         {
-            ChangeState(true);
-            if (RequiredKey.Length != 0)
+            if (!isOpen && RequiredKey.Length != 0)
             {
                 TextController.Get().ShowText("The key works!", Color.red, 4f);
             }
+            ChangeState(true);
         }
         else
         {

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float Thrust = 2000;
     public float Epsilon = 0.1f;
     public float maxVelocity = 15f;
+    public float maxHighVelocity = 25f;
     public int velocity;
     public bool Panic = false;
 
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private NavMeshAgent navAgent;
 
     public bool forceMovement;
+    public bool sugarRush;
 
     // Use this for initialization
     void Start()
@@ -58,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
             if (Math.Abs(x) > Epsilon || Math.Abs(y) > Epsilon)
             {
-                if (velocity < maxVelocity)
+                if (velocity < (sugarRush ? maxHighVelocity : maxVelocity))
                 {
                     rigidBody.AddForce(new Vector3(x, 0, y).normalized * Thrust * Time.deltaTime);
                 }
@@ -83,7 +85,7 @@ public class PlayerController : MonoBehaviour
         {
             modelCycler.StopCycling();
         }
-        modelCycler.Speed = velocity / Math.Max(maxVelocity, navAgent.speed);
+        modelCycler.Speed = velocity / Math.Max(sugarRush ? maxHighVelocity : maxVelocity, navAgent.speed);
     }
 
     private void UpdateInternalVelocity()
@@ -115,6 +117,10 @@ public class PlayerController : MonoBehaviour
 
     public void StopForceMovement()
     {
+        if (Panic)
+        {
+            return;
+        }
         forceMovement = false;
         navAgent.isStopped = true;
         navAgent.enabled = false;

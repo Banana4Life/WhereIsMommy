@@ -64,9 +64,8 @@ public class PanicController : MonoBehaviour
             var navAgent = GetComponent<NavMeshAgent>();
             if (DidAgentReachDestination(navAgent))
             {
-                playerCtrl.StopForceMovement();
-
                 playerCtrl.Panic = false;
+                playerCtrl.StopForceMovement();
                 PanicLevel = 0;
             }
         }
