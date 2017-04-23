@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class PlayerController : MonoBehaviour
 {
     public Camera cam;
@@ -23,60 +22,70 @@ public class PlayerController : MonoBehaviour
     public bool carryLight;
     public int carryMatches = 0;
 
+    private ModelCycler modelCycler;
+    private Rigidbody rigidBody;
+    private NavMeshAgent navAgent;
+
     // Use this for initialization
     void Start()
     {
         carryTeddy = false;
         carryLight = false;
         carryMatches = 0;
+        modelCycler = GetComponentInChildren<ModelCycler>();
+        rigidBody = GetComponent<Rigidbody>();
+        navAgent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Panic)
-        {
-            return;
-        }
+        UpdateInternalVelocity();
+        UpdateAnimationSpeed();
+
         TurnLightOnOff();
-        RotateToMouse();
         CarryTeddy();
-        var x = Input.GetAxisRaw("Horizontal");
-        var y = Input.GetAxisRaw("Vertical");
 
-        var rb = GetComponent<Rigidbody>();
-        velocity = (int)rb.velocity.magnitude;
-        if (Math.Abs(x) > Epsilon || Math.Abs(y) > Epsilon)
+        if (!Panic)
         {
-            if (velocity < maxVelocity)
+            RotateToMouse();
+
+            var x = Input.GetAxisRaw("Horizontal");
+            var y = Input.GetAxisRaw("Vertical");
+
+            if (Math.Abs(x) > Epsilon || Math.Abs(y) > Epsilon)
             {
-                rb.AddForce(new Vector3(x, 0, y).normalized * Thrust * Time.deltaTime);
+                if (velocity < maxVelocity)
+                {
+                    rigidBody.AddForce(new Vector3(x, 0, y).normalized * Thrust * Time.deltaTime);
+                }
+                // else ignore
             }
-            // else ignore
-        }
-        else
-        {
-            var change = new Vector3(rb.velocity.x / -2, 0, rb.velocity.z / -2);
-            rb.AddForce(change, ForceMode.VelocityChange);
-        }
-
-
-        // else Girl runs in panic to the bed
-        /*
-        if (Input.GetMouseButton(0))
-        {
-            RaycastHit hit;
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
+            else
             {
-                var agent = gameObject.GetComponent<NavMeshAgent>();
-                agent.SetDestination(hit.point);
+                var change = new Vector3(rigidBody.velocity.x / -2, 0, rigidBody.velocity.z / -2);
+                rigidBody.AddForce(change, ForceMode.VelocityChange);
             }
         }
-        */
 
+    }
 
+    private void UpdateAnimationSpeed()
+    {
+        if (velocity > 0 && !modelCycler.IsCycling())
+        {
+            modelCycler.StartCycling();
+        }
+        else if (velocity < float.Epsilon && modelCycler.IsCycling())
+        {
+            modelCycler.StopCycling();
+        }
+        modelCycler.Speed = velocity / Math.Max(maxVelocity, navAgent.speed);
+    }
 
+    private void UpdateInternalVelocity()
+    {
+        velocity = (int)Math.Max(rigidBody.velocity.magnitude, navAgent.velocity.magnitude);
     }
 
     private void CarryTeddy()
@@ -99,41 +108,6 @@ public class PlayerController : MonoBehaviour
             hitPoint.y = gameObject.transform.position.y;
             gameObject.transform.LookAt(hitPoint);
         }
-    }
-
-    void FixedUpdate()
-    {
-//        if (panic < 100)
-//        {
-//            var x = Input.GetAxis("Horizontal");
-//            var y = Input.GetAxis("Vertical");
-//
-//            if (Math.Abs(x) < 0.2)
-//            {
-//                x = 0;
-//            }
-//            if (Math.Abs(y) < 0.2)
-//            {
-//                y = 0;
-//            }
-////            Debug.Log(x + ":" + y);
-//
-////            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(x * speed, 0, y * speed);
-//            var targetPos = gameObject.transform.position + new Vector3(x, 0, y).normalized * speed;
-//            //gameObject.GetComponent<Rigidbody>().MovePosition(targetPos);
-//
-//            var agent = gameObject.GetComponent<NavMeshAgent>();
-//            if (x == 0 && y == 0)
-//            {
-//                agent.isStopped = true;
-//            }
-//            else
-//            {
-//                agent.isStopped = false;
-//                agent.SetDestination(targetPos);
-//            }
-//
-//        }
     }
 
 }
