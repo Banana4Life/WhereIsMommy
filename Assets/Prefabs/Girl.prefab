@@ -308,8 +308,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
-  m_LocalRotation: {x: -0.00013303717, y: 0.7072659, z: -0.00013624023, w: 0.7069477}
-  m_LocalPosition: {x: -55.886314, y: 6.6367444e-14, z: -54.266422}
+  m_LocalRotation: {x: 0, y: -0.96751094, z: 0, w: 0.25282934}
+  m_LocalPosition: {x: -21.53, y: 0.22, z: -21.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
@@ -535,7 +535,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294966271
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 3.84
@@ -571,7 +571,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294966271
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
