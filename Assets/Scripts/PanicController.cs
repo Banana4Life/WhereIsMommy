@@ -31,6 +31,7 @@ public class PanicController : MonoBehaviour
             if (!hasTeddy)
             {
                 increase = float.MaxValue;
+                // TODO show text need mah Teddy
             }
             else
             {
