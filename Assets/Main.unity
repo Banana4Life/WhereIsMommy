@@ -993,11 +993,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114996743791282218, guid: 008471434a13aea46a44e9de619a778b,
-        type: 2}
-      propertyPath: textController
-      value: 
-      objectReference: {fileID: 1179880106}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 008471434a13aea46a44e9de619a778b, type: 2}
   m_IsPrefabParent: 0
