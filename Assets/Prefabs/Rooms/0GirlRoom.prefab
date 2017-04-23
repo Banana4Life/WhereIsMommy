@@ -82,6 +82,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4155688934835892}
+  - component: {fileID: 208496539477545006}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -101,7 +102,7 @@ GameObject:
   - component: {fileID: 23310536454303940}
   - component: {fileID: 64040329658573200}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelTeddy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +151,7 @@ GameObject:
   - component: {fileID: 33400274293562768}
   - component: {fileID: 23705861681823190}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelBed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,6 +183,7 @@ GameObject:
   - component: {fileID: 114048671409728400}
   - component: {fileID: 54986225475064564}
   - component: {fileID: 64139771998572106}
+  - component: {fileID: 208868171168495104}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -201,7 +203,7 @@ GameObject:
   - component: {fileID: 23777542797838226}
   - component: {fileID: 64685222704584842}
   m_Layer: 0
-  m_Name: Mesh1_Model
+  m_Name: ModelDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +220,7 @@ GameObject:
   - component: {fileID: 33442861148957598}
   - component: {fileID: 23556274129076166}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelCabinetBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,7 +252,7 @@ GameObject:
   - component: {fileID: 33129592314542338}
   - component: {fileID: 23766784541783434}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelCabinettSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -930,3 +932,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teddyText: {fileID: 0}
   textHider: {fileID: 0}
+--- !u!208 &208496539477545006
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1148711059719902}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!208 &208868171168495104
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377803385939950}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

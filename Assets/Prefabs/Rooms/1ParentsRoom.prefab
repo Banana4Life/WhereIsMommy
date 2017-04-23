@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 33405609927333776}
   - component: {fileID: 23332823975366806}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelBed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 33618963173258618}
   - component: {fileID: 23471039756116834}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelCabinetBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 33108407648067068}
   - component: {fileID: 23244447919351362}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelBed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,6 +182,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4679792721175854}
+  - component: {fileID: 208946116547719806}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -201,7 +202,7 @@ GameObject:
   - component: {fileID: 23017819173171574}
   - component: {fileID: 64087565958692222}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +294,7 @@ GameObject:
   - component: {fileID: 33295469113462192}
   - component: {fileID: 23778358855548682}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelCabinetSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,6 +308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4008437180840950}
+  - component: {fileID: 208369144832784276}
   m_Layer: 0
   m_Name: Bed (1)
   m_TagString: Untagged
@@ -325,7 +327,7 @@ GameObject:
   - component: {fileID: 33879723581964186}
   - component: {fileID: 23999274020060672}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelCabinetSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,7 +344,7 @@ GameObject:
   - component: {fileID: 33703384652269056}
   - component: {fileID: 23575479169845874}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelCandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,7 +391,7 @@ GameObject:
   - component: {fileID: 33070618039097954}
   - component: {fileID: 23808094410184710}
   m_Layer: 0
-  m_Name: default
+  m_Name: ModelCabinetBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1324,3 +1326,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5cbb9182ff41269125e19aaff9077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!208 &208369144832784276
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1622561541700658}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!208 &208946116547719806
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259221671102508}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
