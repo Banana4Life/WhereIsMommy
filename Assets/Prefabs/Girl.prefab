@@ -271,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1968217847676562
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  camOffset: {x: -2.03, y: 15, z: -5.7}
+  camOffset: {x: -0.18, y: 8.72, z: -3}
 --- !u!114 &114086110393262488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -928,7 +928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanicLevel: 0
   PanicThreshold: 300
-  PanicIncrease: 30
+  PanicIncrease: 15
   PanicIncreaseNoFlash: 150
   PanicDecrease: 50
   ReturnTo: {fileID: 0}
@@ -953,7 +953,7 @@ MonoBehaviour:
   carryUvLight: 0
   carryKey1: 1
   carryKey2: 1
-  carryMatches: 0
+  carryMatches: 2
 --- !u!114 &114250885029735736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1008,7 +1008,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key:
   - Key1
-  - Key2
 --- !u!195 &195822284041204922
 NavMeshAgent:
   m_ObjectHideFlags: 1
