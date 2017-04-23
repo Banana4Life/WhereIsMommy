@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool Panic = false;
 
     public List<char> kombination = new List<char> {'A', 'B', 'C'};
+    public int buttonsPressed = 0;
 
     private ModelCycler modelCycler;
     private Rigidbody rigidBody;
@@ -44,15 +45,26 @@ public class PlayerController : MonoBehaviour
             buttonController.setButtonLetter(kombination[i]);
         }
         forceMovement = false;
+        buttonsPressed = 0;
         modelCycler = GetComponentInChildren<ModelCycler>();
         rigidBody = GetComponent<Rigidbody>();
         navAgent = GetComponent<NavMeshAgent>();
         carry = GetComponent<CarryScript>();
     }
 
-    public void OnButtonPress(char letter)
+    public bool OnButtonPress(char letter)
     {
-        // TODO
+        if (kombination[buttonsPressed] == letter)
+        {
+            buttonsPressed++;
+            if (buttonsPressed == 3)
+            {
+                // TODO open door
+            }
+            return true;
+        }
+        buttonsPressed = 0;
+        return false;
     }
 
     public CarryScript Carry()
