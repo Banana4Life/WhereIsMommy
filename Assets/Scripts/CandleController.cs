@@ -37,5 +37,10 @@ public class CandleController : CollisionController
                 TextController.Get().ShowText("This candle is no match for me!", Color.red, 4f);
             }
         }
+        if (lit)
+        {
+            GameObject.Find("SafePoint").transform.position = gameObject.transform.position;
+            Debug.Log("Safepoint set");
+        }
     }
 }
