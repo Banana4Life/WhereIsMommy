@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             i++;
             var buttonController = btn.GetComponent<ButtonController>();
-            buttonController.setButtonLetter(kombination[i]);
+            buttonController.SetButtonLetter(kombination[i]);
         }
         forceMovement = false;
         buttonsPressed = 0;
