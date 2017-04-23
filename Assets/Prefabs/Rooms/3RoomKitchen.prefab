@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 4060279109800806}
   - component: {fileID: 33235736765058310}
   - component: {fileID: 23587583525180840}
+  - component: {fileID: 64089754389008666}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -86,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4440999122779208}
   - component: {fileID: 114686324942402480}
+  - component: {fileID: 54173049025689060}
   m_Layer: 0
   m_Name: Matches
   m_TagString: Untagged
@@ -117,6 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4914755380859478}
   - component: {fileID: 114239262364389574}
+  - component: {fileID: 54611664177826682}
   m_Layer: 0
   m_Name: Candle
   m_TagString: Untagged
@@ -174,7 +177,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1194717058355572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000022888184, y: 0, z: 0.000011444092}
+  m_LocalPosition: {x: 0.000022888184, y: 2.08, z: 0.000011444092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4440999122779208}
@@ -242,7 +245,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1754883748460528}
   m_LocalRotation: {x: 0, y: 0.9848078, z: 0, w: 0.17364825}
-  m_LocalPosition: {x: -78.23, y: 0, z: -52.7}
+  m_LocalPosition: {x: -78.23, y: 0.19, z: -52.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4064635747751074}
@@ -328,6 +331,50 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1333837808848818}
+  m_Mesh: {fileID: 4300000, guid: 7b26b399a7ecbd44bb91e4babdf843ae, type: 3}
+--- !u!54 &54173049025689060
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1560153647773162}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54611664177826682
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1754883748460528}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &64089754389008666
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333837808848818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 7b26b399a7ecbd44bb91e4babdf843ae, type: 3}
 --- !u!65 &65163177155975726
 BoxCollider:
@@ -424,6 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db56c84d8a1ab4f31bac1fcea1b564b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textContoller: {fileID: 0}
   lit: 0
 --- !u!114 &114686324942402480
 MonoBehaviour:

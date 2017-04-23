@@ -86,7 +86,8 @@ public class PanicController : MonoBehaviour
 
     private bool IsInLight(GameObject candle)
     {
-        if (!candle.GetComponentInParent<CandleController>().lit)
+        var cc = candle.GetComponentInParent<CandleController>();
+        if (cc != null && !cc.lit)
         {
             return false;
         }

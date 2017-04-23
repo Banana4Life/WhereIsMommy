@@ -25,16 +25,19 @@ public class CandleController : CollisionController
 
     protected override void handle(PlayerController playerController)
     {
-        if (playerController.carryMatches > 0)
+        if (!lit)
         {
-            playerController.carryMatches--;
-            lit = true;
-            UpdateLight();
-            textContoller.GetComponent<TextController>().ShowText("Finally some light!", Color.red, 4f);
-        }
-        else
-        {
-            textContoller.GetComponent<TextController>().ShowText("This candle is no match for me!", Color.red, 4f);
+            if (playerController.carryMatches > 0)
+            {
+                playerController.carryMatches--;
+                lit = true;
+                UpdateLight();
+                textContoller.GetComponent<TextController>().ShowText("Finally some light!", Color.red, 4f);
+            }
+            else
+            {
+                textContoller.GetComponent<TextController>().ShowText("This candle is no match for me!", Color.red, 4f);
+            }
         }
     }
 }
