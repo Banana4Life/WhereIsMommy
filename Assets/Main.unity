@@ -686,34 +686,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1966540371216606, guid: bb1552f661558436e9b6f813db000c9e, type: 2}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382992327979424, guid: bb1552f661558436e9b6f813db000c9e, type: 2}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1667069468335836, guid: bb1552f661558436e9b6f813db000c9e, type: 2}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419577380930624, guid: bb1552f661558436e9b6f813db000c9e, type: 2}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1994207356698812, guid: bb1552f661558436e9b6f813db000c9e, type: 2}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1857597859029172, guid: bb1552f661558436e9b6f813db000c9e, type: 2}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382992327979424, guid: bb1552f661558436e9b6f813db000c9e, type: 2}
-      propertyPath: m_TagString
-      value: Candle
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb1552f661558436e9b6f813db000c9e, type: 2}
   m_IsPrefabParent: 0
