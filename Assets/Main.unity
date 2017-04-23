@@ -411,16 +411,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114456071958750184, guid: b7ba7d245840149998d5836d1e6a4896,
-        type: 2}
-      propertyPath: textController
-      value: 
-      objectReference: {fileID: 1179880106}
-    - target: {fileID: 114549660505542796, guid: b7ba7d245840149998d5836d1e6a4896,
-        type: 2}
-      propertyPath: textController
-      value: 
-      objectReference: {fileID: 1179880106}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7ba7d245840149998d5836d1e6a4896, type: 2}
   m_IsPrefabParent: 0
