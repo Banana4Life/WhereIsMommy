@@ -603,10 +603,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169a42fc03a8a7d41b73aec97f83508a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textController: {fileID: 0}
   PanicLevel: 0
   PanicThreshold: 300
   PanicIncrease: 10
-  PanicIncreaseNoFlash: 30
+  PanicIncreaseNoFlash: 150
   PanicDecrease: 10
   ReturnTo: {fileID: 0}
 --- !u!114 &114250885029735736
