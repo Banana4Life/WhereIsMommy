@@ -6,7 +6,6 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     public String RequiredKey;
-    public Vector3 RelativeRotationAxis = Vector3.zero;
     public bool ClockWise = true;
     public float RotationSpeed = 45f;
     private bool isOpen = false;
@@ -35,6 +34,10 @@ public class DoorController : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         var keyHolder = other.gameObject.GetComponentInParent<KeyHolder>();
+        if (!keyHolder)
+        {
+            return;
+        }
         if (keyHolder.MayOpen(RequiredKey))
         {
             if (!isOpen && RequiredKey.Length != 0)
