@@ -61,7 +61,6 @@ public class PanicController : MonoBehaviour
             {
                 navAgent.isStopped = true;
                 navAgent.enabled = false;
-                Debug.LogWarning("Destination Fucked!");
                 playerCtrl.Panic = false;
                 PanicLevel = 0;
             }
@@ -71,7 +70,6 @@ public class PanicController : MonoBehaviour
     private static bool DidAgentReachDestination(NavMeshAgent agent)
     {
         var distance = Vector3.Distance(agent.gameObject.transform.position, agent.destination);
-        Debug.Log("Distance to destination fucked: " + distance);
         return distance <= agent.stoppingDistance;
     }
 
