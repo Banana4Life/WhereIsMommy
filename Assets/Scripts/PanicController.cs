@@ -86,6 +86,10 @@ public class PanicController : MonoBehaviour
 
     private bool IsInLight(GameObject candle)
     {
+        if (!candle.GetComponentInParent<CandleController>().lit)
+        {
+            return false;
+        }
         var range = candle.GetComponentInChildren<Light>().range;
         var direction = transform.position - candle.transform.position;
         var distance = Vector3.Magnitude(direction);

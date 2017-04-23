@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57aa518f0b85f4bdbb8c8da975dd5a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textController: {fileID: 0}
   keyName: Key1
 --- !u!208 &208633978289267646
 NavMeshObstacle:

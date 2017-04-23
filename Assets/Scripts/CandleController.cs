@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CandleController : CollisionController
 {
+    public GameObject textContoller;
+
     public bool lit;
 
     void Start()
@@ -23,15 +25,16 @@ public class CandleController : CollisionController
 
     protected override void handle(PlayerController playerController)
     {
-        if (playerController.carryMatches)
+        if (playerController.carryMatches > 0)
         {
+            playerController.carryMatches--;
             lit = true;
             UpdateLight();
-            // TODO Text
+            textContoller.GetComponent<TextController>().ShowText("Finally some light!", Color.red, 4f);
         }
         else
         {
-            // TODO # I need something to light this candle #
+            textContoller.GetComponent<TextController>().ShowText("This candle is no match for me!", Color.red, 4f);
         }
     }
 }
