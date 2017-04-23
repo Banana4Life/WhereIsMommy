@@ -4,26 +4,52 @@ using UnityEngine;
 
 public class ButtonController : CollisionController
 {
+    public Texture[] Textures;
+
+    private Texture texture;
     private Light statusLight;
     private char letter;
-    private Texture texture;
-    private Texture[] textures;
 
     // Use this for initialization
     void Start()
     {
         statusLight = GetComponentInChildren<Light>();
+        statusLight.enabled = false;
     }
 
-    public void SetButtonLetter(char letter)
+    public void SetButtonLetter(char newLetter)
     {
-        this.letter = letter;
+        this.letter = newLetter;
         int textureOffset = 'A' - letter;
-        texture = textures[textureOffset];
+        texture = Textures[textureOffset];
     }
 
     protected override void handle(PlayerController playerController)
     {
-        //playerController.OnButtonPressed(letter);
+        var correctOrder = playerController.OnButtonPress(letter);
+        EnableLight(correctOrder);
+        PlaySound(correctOrder);
+
+    }
+
+    private void PlaySound(bool good)
+    {
+        // TODO implement me!
+    }
+
+
+    private void EnableLight(bool good)
+    {
+        statusLight.color = good ? Color.red : Color.green;
+        statusLight.enabled = true;
+        if (!IsInvoking("DisableLight"))
+        {
+            Invoke("DisableLight", 3f);
+        }
+    }
+
+    private void DisableLight()
+    {
+        statusLight.enabled = false;
     }
 }
