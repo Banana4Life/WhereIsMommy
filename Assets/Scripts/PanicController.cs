@@ -9,6 +9,8 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class PanicController : MonoBehaviour
 {
+    public GameObject textController;
+
     public float PanicLevel;
     public float PanicThreshold = 300;
     public float PanicIncrease = 10;

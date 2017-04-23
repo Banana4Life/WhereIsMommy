@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 1179880108}
   - component: {fileID: 1179880107}
   m_Layer: 0
-  m_Name: TextHider
+  m_Name: TextController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,6 +551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e99ba38b1b100e64c85423f1881abfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textObject: {fileID: 1401590153}
+  time: 0
 --- !u!4 &1179880108
 Transform:
   m_ObjectHideFlags: 0
@@ -575,7 +577,7 @@ GameObject:
   - component: {fileID: 1401590156}
   - component: {fileID: 1401590155}
   m_Layer: 5
-  m_Name: TeddyPickup
+  m_Name: InfoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -631,7 +633,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Now I have my teddy. I am ready to go.
+  m_Text: '# INSERT COIN HERE #'
 --- !u!222 &1401590156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -776,6 +778,11 @@ Prefab:
       propertyPath: textHider
       value: 
       objectReference: {fileID: 1179880106}
+    - target: {fileID: 114996743791282218, guid: 008471434a13aea46a44e9de619a778b,
+        type: 2}
+      propertyPath: textObject
+      value: 
+      objectReference: {fileID: 1401590153}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 008471434a13aea46a44e9de619a778b, type: 2}
   m_IsPrefabParent: 0
@@ -947,6 +954,11 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1659018932}
+    - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: textController
+      value: 
+      objectReference: {fileID: 1179880106}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
   m_IsPrefabParent: 0
