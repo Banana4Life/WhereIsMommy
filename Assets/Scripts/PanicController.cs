@@ -96,6 +96,10 @@ public class PanicController : MonoBehaviour
         {
             RaycastHit hit;
             Physics.Raycast(candle.transform.position, direction, out hit, distance);
+            if (hit.collider == null)
+            {
+                return false;
+            }
             return hit.collider.GetComponentInParent<PlayerController>();
         }
         return false;

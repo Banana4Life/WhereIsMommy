@@ -193,6 +193,14 @@ Prefab:
       propertyPath: textController
       value: 
       objectReference: {fileID: 1179880106}
+    - target: {fileID: 4852882116297364, guid: 7e9b1573c6cbc764e992e3a9859df638, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852882116297364, guid: 7e9b1573c6cbc764e992e3a9859df638, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e9b1573c6cbc764e992e3a9859df638, type: 2}
   m_IsPrefabParent: 0
