@@ -295,26 +295,6 @@ Prefab:
       propertyPath: textContoller
       value: 
       objectReference: {fileID: 1179880106}
-    - target: {fileID: 4188361026620964, guid: 1f9c9fbd9df394db298fa28351d981f1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 4188361026620964, guid: 1f9c9fbd9df394db298fa28351d981f1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 3.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4914755380859478, guid: 1f9c9fbd9df394db298fa28351d981f1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -77.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 4914755380859478, guid: 1f9c9fbd9df394db298fa28351d981f1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -53.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4914755380859478, guid: 1f9c9fbd9df394db298fa28351d981f1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -2.12
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f9c9fbd9df394db298fa28351d981f1, type: 2}
   m_IsPrefabParent: 0
