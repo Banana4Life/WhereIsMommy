@@ -58,8 +58,10 @@ public class PlayerController : MonoBehaviour
             {
                 // TODO open door
             }
+            Debug.Log("Correct");
             return true;
         }
+        Debug.Log("Wrong");
         buttonsPressed = 0;
         return false;
     }

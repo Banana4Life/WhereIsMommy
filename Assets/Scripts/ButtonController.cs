@@ -40,7 +40,7 @@ public class ButtonController : CollisionController
 
     private void EnableLight(bool good)
     {
-        statusLight.color = good ? Color.red : Color.green;
+        statusLight.color = good ? Color.green : Color.red;
         statusLight.enabled = true;
         if (!IsInvoking("DisableLight"))
         {
