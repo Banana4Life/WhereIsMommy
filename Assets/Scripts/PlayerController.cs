@@ -125,7 +125,9 @@ public class PlayerController : MonoBehaviour
         {
             var hitPoint = hit.point;
             hitPoint.y = gameObject.transform.position.y;
-            gameObject.transform.LookAt(hitPoint);
+            var toRot = Quaternion.LookRotation(hitPoint - gameObject.transform.position);
+            var fromRot = gameObject.transform.rotation;
+            gameObject.transform.rotation = Quaternion.RotateTowards(fromRot, toRot, 220 * Time.deltaTime);
         }
     }
 
