@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ButtonController : CollisionController
 {
-    public Texture[] Textures;
+    public Material[] Materials;
+    public GameObject Letter;
 
-    private Texture texture;
     private Light statusLight;
-    private char letter;
+    private char letterChar;
 
     // Use this for initialization
     void Start()
@@ -19,14 +19,16 @@ public class ButtonController : CollisionController
 
     public void SetButtonLetter(char newLetter)
     {
-        letter = newLetter;
-        int textureOffset = letter - 'A';
-        texture = Textures[textureOffset];
+        letterChar = newLetter;
+        int materialOffset = newLetter - 'A';
+        var material = Materials[materialOffset];
+        var letterRenderer = Letter.GetComponent<Renderer>();
+        letterRenderer.material = material;
     }
 
     protected override void handle(PlayerController playerController)
     {
-        var correctOrder = playerController.OnButtonPress(letter);
+        var correctOrder = playerController.OnButtonPress(letterChar);
         EnableLight(correctOrder);
         PlaySound(correctOrder);
 
