@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public AudioMixer mixer;
     public int rotationSpeed = 250;
     public GameObject trailPrefab;
+    public bool bloodyTrail;
 
     [Header("Audio Sources")]
     public AudioSource voiceSource;
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviour
         navAgent = GetComponent<NavMeshAgent>();
         carry = GetComponent<CarryScript>();
         trail = GameObject.Find("Trail");
+        bloodyTrail = false;
     }
 
     private void OnModelCycle(int index)
@@ -77,27 +79,30 @@ public class PlayerController : MonoBehaviour
         if (index == 1)
         {
             clip = stepSounds[0];
-            var step = Instantiate(trailPrefab);
-            step.name = "Step " + stepCount++;
-            step.transform.position = gameObject.transform.position + new Vector3(0.32f,0.001f,0);
-            step.transform.rotation = gameObject.transform.rotation;
-            step.transform.parent = trail.transform;
-
+            step(true);
         }
         else if (index == 3)
         {
             clip = stepSounds[1];
-            var step = Instantiate(trailPrefab);
-            step.name = "Step " + stepCount++;
-            step.transform.position = gameObject.transform.position + new Vector3(-0.32f,0.001f,0);
-            step.transform.rotation = gameObject.transform.rotation;
-            step.transform.parent = trail.transform;
+            step(false);
         }
         else
         {
             return;
         }
         stepSource.PlayOneShot(clip);
+    }
+
+    private void step(bool left)
+    {
+        if (bloodyTrail)
+        {
+            var step = Instantiate(trailPrefab);
+            step.name = "Step " + stepCount++;
+            step.transform.position = gameObject.transform.position + new Vector3(left ? 0.32f : -0.32f, 0.001f, 0);
+            step.transform.rotation = gameObject.transform.rotation;
+            step.transform.parent = trail.transform;
+        }
     }
 
     public bool OnButtonPress(char letter)

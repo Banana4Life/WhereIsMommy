@@ -6418,6 +6418,8 @@ GameObject:
   - component: {fileID: 795858106}
   - component: {fileID: 795858109}
   - component: {fileID: 795858107}
+  - component: {fileID: 795858110}
+  - component: {fileID: 795858108}
   m_Layer: 10
   m_Name: BloodSmear_Decal
   m_TagString: Untagged
@@ -6472,6 +6474,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &795858108
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 795858105}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.17617, y: 2.18, z: 4.185817}
+  m_Center: {x: 0.67732084, y: 0.81, z: -1.8035495}
 --- !u!33 &795858109
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6480,6 +6494,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 795858105}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &795858110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 795858105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000ef04a1bf094d3d8e6f5ecbfbd815a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &815099806
 GameObject:
   m_ObjectHideFlags: 0
