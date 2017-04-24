@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ButtonLetter
+  m_Name: ButtonLetterA
   m_Shader: {fileID: 4800000, guid: 666235e1583f08a479480c89e4a668e5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
