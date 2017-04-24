@@ -6,9 +6,13 @@ public class CandleController : CollisionController
 {
     public bool lit;
 
+    private AudioSource audioSource;
+
+
     void Start()
     {
         UpdateLight();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void UpdateLight()
@@ -35,6 +39,7 @@ public class CandleController : CollisionController
                 playerController.Carry().carryMatches--;
                 lit = true;
                 UpdateLight();
+                audioSource.Play();
                 TextController.Get().ShowText("Finally some light!", TextController.red, 4f);
             }
             else
