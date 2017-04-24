@@ -1238,6 +1238,7 @@ MonoBehaviour:
   PanicDecrease: 50
   ReturnTo: {fileID: 0}
   heartbeatSource: {fileID: 82948202604465208}
+  MinHeartbeatVolume: 0
 --- !u!114 &114116795835843362
 MonoBehaviour:
   m_ObjectHideFlags: 1
