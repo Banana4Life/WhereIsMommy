@@ -2378,7 +2378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9e1aec1d72b4ecd82c42f55d602090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Now I have my teddy. I am ready to go.
+  pickupSound: {fileID: 8300000, guid: 72055656a63bc4ede8c0ca718b82f3d0, type: 3}
 --- !u!54 &256307482
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5935,6 +5935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   legendary: 0
+  pickupSound: {fileID: 8300000, guid: 72055656a63bc4ede8c0ca718b82f3d0, type: 3}
 --- !u!54 &752545197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9765,6 +9766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   legendary: 1
+  pickupSound: {fileID: 8300000, guid: 72055656a63bc4ede8c0ca718b82f3d0, type: 3}
 --- !u!54 &1213356350
 Rigidbody:
   m_ObjectHideFlags: 0
