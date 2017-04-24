@@ -39,7 +39,7 @@ public class ButtonController : CollisionController
 
     private void PlaySound()
     {
-        audioSource.Play();
+        audioSource.PlayScheduled(Time.time);
     }
 
 
