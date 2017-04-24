@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33794497231856824}
   - component: {fileID: 23484169198155148}
   - component: {fileID: 64875793642653890}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33420655543325522}
   - component: {fileID: 23436675039543184}
   - component: {fileID: 64021197120345702}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4592618320705258}
   - component: {fileID: 208343427249912888}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4232450093883020}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 33412316795742482}
   - component: {fileID: 23113730977011016}
   - component: {fileID: 64780889728168332}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4741999784378222}
   - component: {fileID: 108212083072660442}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point light
   m_TagString: Candle
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 33235736765058310}
   - component: {fileID: 23587583525180840}
   - component: {fileID: 65570791871970472}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4567350891724512}
   - component: {fileID: 208153479289057110}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chair (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4813570927196898}
   - component: {fileID: 208604102770661570}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BigTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4971282347969700}
   - component: {fileID: 208726783735485696}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 4987888639373724}
   - component: {fileID: 33124759367671590}
   - component: {fileID: 23149553488468912}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 33040464240081604}
   - component: {fileID: 23370765817426834}
   - component: {fileID: 64009559246754930}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4064635747751074}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Candle0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +482,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4360291400788268}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AlienPlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 4914755380859478}
   - component: {fileID: 114239262364389574}
   - component: {fileID: 54611664177826682}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Candle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4386946851079314}
   - component: {fileID: 208386650693026942}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Chair (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 33911794977008636}
   - component: {fileID: 23777246790418732}
   - component: {fileID: 64038078358341416}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4188361026620964}
   - component: {fileID: 108548853366028256}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

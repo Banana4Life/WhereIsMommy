@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4244016237461436}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CabinetBathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 4576518800723316}
   - component: {fileID: 33477005550188552}
   - component: {fileID: 23140057269444472}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446373955793700}
   - component: {fileID: 208389281616593946}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Box (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 33483891178495342}
   - component: {fileID: 23884405902622170}
   - component: {fileID: 64247489208986634}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
