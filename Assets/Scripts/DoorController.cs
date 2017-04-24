@@ -16,6 +16,7 @@ public class DoorController : MonoBehaviour
     private Quaternion targetRotation;
     private AudioSource audioSource;
     public float DoorOpenSoundChance = 0.6f;
+    public float SoundVolumeScale = 0.7f;
 
     // Use this for initialization
     void Start()
@@ -51,7 +52,6 @@ public class DoorController : MonoBehaviour
                 TextController.Get().ShowText("The key works!", TextController.red, 4f);
             }
             ChangeState(true);
-            PlaySoundOpened();
         }
         else
         {
@@ -64,7 +64,7 @@ public class DoorController : MonoBehaviour
         if (UnityEngine.Random.value <= DoorOpenSoundChance)
         {
             var clip = DoorOpenSounds[UnityEngine.Random.Range(0, DoorOpenSounds.Length)];
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip, SoundVolumeScale);
         }
     }
 
@@ -77,6 +77,10 @@ public class DoorController : MonoBehaviour
     {
         if (open != isOpen)
         {
+            if (open)
+            {
+                PlaySoundOpened();
+            }
             isOpen = open;
             changing = true;
             var direction = 90 * (ClockWise && open ? 1 : -1);
