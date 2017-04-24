@@ -127,10 +127,12 @@ public class PlayerController : MonoBehaviour
         velocity = (int)Math.Max(rigidBody.velocity.magnitude, navAgent.velocity.magnitude);
     }
 
+    private Ray ray;
     private void RotateToMouse()
     {
         RaycastHit hit;
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawLine(ray.origin, gameObject.transform.position, Color.red);
         if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
         {
             var hitPoint = hit.point;
