@@ -696,7 +696,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859773859419526}
   m_LocalRotation: {x: -0, y: -0.96751094, z: -0, w: 0.25282934}
-  m_LocalPosition: {x: -21.53, y: 0.22, z: -21.61}
+  m_LocalPosition: {x: -21.53, y: 0.22, z: -21.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4939733709753724}
@@ -1659,6 +1659,8 @@ MonoBehaviour:
   Panic: 0
   mixer: {fileID: 24100000, guid: 0617be51ef9ae4d50b5c241f5650e6c4, type: 2}
   rotationSpeed: 250
+  trailPrefab: {fileID: 1099452213498982, guid: 2e2c988a5c3f44b39a43ccd08e6ce390,
+    type: 2}
   voiceSource: {fileID: 82943820365165976}
   stepSource: {fileID: 82663157095822468}
   stepSounds:

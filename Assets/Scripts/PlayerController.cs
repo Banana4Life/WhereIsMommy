@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public bool Panic = false;
     public AudioMixer mixer;
     public int rotationSpeed = 250;
+    public GameObject trailPrefab;
 
     [Header("Audio Sources")]
     public AudioSource voiceSource;
@@ -47,6 +48,9 @@ public class PlayerController : MonoBehaviour
     public GameObject bigDoorPlane;
     public GameObject bigDoorSpotlight;
 
+    private GameObject trail;
+    private int stepCount = 0;
+
     // Use this for initialization
     void Start()
     {
@@ -63,6 +67,7 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         navAgent = GetComponent<NavMeshAgent>();
         carry = GetComponent<CarryScript>();
+        trail = GameObject.Find("Trail");
     }
 
     private void OnModelCycle(int index)
@@ -72,10 +77,21 @@ public class PlayerController : MonoBehaviour
         if (index == 1)
         {
             clip = stepSounds[0];
+            var step = Instantiate(trailPrefab);
+            step.name = "Step " + stepCount++;
+            step.transform.position = gameObject.transform.position + new Vector3(0.32f,0.001f,0);
+            step.transform.rotation = gameObject.transform.rotation;
+            step.transform.parent = trail.transform;
+
         }
         else if (index == 3)
         {
             clip = stepSounds[1];
+            var step = Instantiate(trailPrefab);
+            step.name = "Step " + stepCount++;
+            step.transform.position = gameObject.transform.position + new Vector3(-0.32f,0.001f,0);
+            step.transform.rotation = gameObject.transform.rotation;
+            step.transform.parent = trail.transform;
         }
         else
         {
