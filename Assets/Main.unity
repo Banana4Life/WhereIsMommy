@@ -365,6 +365,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114734947766967358, guid: 29cfdeab0cb2d4d82a3b89d54dc0c924,
+        type: 2}
+      propertyPath: lit
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29cfdeab0cb2d4d82a3b89d54dc0c924, type: 2}
   m_IsPrefabParent: 0
@@ -484,7 +489,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 648355838}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
