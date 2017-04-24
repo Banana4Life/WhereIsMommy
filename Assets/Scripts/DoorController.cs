@@ -9,14 +9,18 @@ public class DoorController : MonoBehaviour
     public String RequiredKey;
     public bool ClockWise = true;
     public float RotationSpeed = 45f;
+
+    [Header("Audio")]
     public AudioClip[] DoorOpenSounds;
-    public AudioClip DoorLockedSound;
+    public AudioClip[] DoorLockedSounds;
+    public float DoorOpenSoundChance = 0.6f;
+    public float SoundVolumeScale = 0.7f;
+
+    // internal
     private bool isOpen = false;
     private bool changing = false;
     private Quaternion targetRotation;
     private AudioSource audioSource;
-    public float DoorOpenSoundChance = 0.6f;
-    public float SoundVolumeScale = 0.7f;
 
     // Use this for initialization
     void Start()
@@ -55,6 +59,7 @@ public class DoorController : MonoBehaviour
         }
         else
         {
+            PlaySoundLocked();
             TextController.Get().ShowText("It's locked!", TextController.red, 4f);
         }
     }
@@ -70,7 +75,8 @@ public class DoorController : MonoBehaviour
 
     private void PlaySoundLocked()
     {
-        // TODO audioSource.PlayOneShot(DoorLockedSound);
+        var clip = DoorLockedSounds[UnityEngine.Random.Range(0, DoorLockedSounds.Length)];
+        audioSource.PlayOneShot(clip, SoundVolumeScale);
     }
 
     public void ChangeState(bool open)
