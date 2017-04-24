@@ -56,14 +56,14 @@ public class PanicController : MonoBehaviour
                 if (hasTeddy)
                 {
                     TextController.Get().ShowText("I am sure I saw something move in the dark!", TextController.red, 4f);
-                    playerCtrl.voiceSource.clip = panicDark;
-                    playerCtrl.voiceSource.Play();
+                    //playerCtrl.voiceSource.clip = panicDark;
+                    playerCtrl.voiceSource.PlayOneShot(panicDark);
                 }
                 else
                 {
                     TextController.Get().ShowText("It's too dark. I need my Teddy!", TextController.red, 4f);
-                    playerCtrl.voiceSource.clip = panicTeddy;
-                    playerCtrl.voiceSource.Play();
+                    //playerCtrl.voiceSource.clip = panicTeddy;
+                    playerCtrl.voiceSource.PlayOneShot(panicTeddy);
                 }
                 playerCtrl.ForceMovement(ReturnTo.transform.position);
                 playerCtrl.Panic = true;
@@ -76,6 +76,7 @@ public class PanicController : MonoBehaviour
             {
                 playerCtrl.Panic = false;
                 playerCtrl.StopForceMovement();
+                PanicLevel = Math.Min(300, PanicLevel);
                 //PanicLevel = 0;
             }
         }
