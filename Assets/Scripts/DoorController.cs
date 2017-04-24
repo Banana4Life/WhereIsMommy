@@ -13,6 +13,7 @@ public class DoorController : MonoBehaviour
     [Header("Audio")]
     public AudioClip[] DoorOpenSounds;
     public AudioClip[] DoorLockedSounds;
+    public AudioClip DoorKeySound;
     public float DoorOpenSoundChance = 0.6f;
 
     // internal
@@ -53,6 +54,7 @@ public class DoorController : MonoBehaviour
             if (!isOpen && RequiredKey.Length != 0)
             {
                 TextController.Get().ShowText("The key works!", TextController.red, 4f);
+                audioSource.PlayOneShot(DoorKeySound);
             }
             ChangeState(true);
         }

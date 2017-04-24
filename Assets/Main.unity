@@ -179,6 +179,7 @@ MonoBehaviour:
   DoorLockedSounds:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
+  DoorKeySound: {fileID: 8300000, guid: c68bb5ab216dc449a860187d41f3d1af, type: 3}
   DoorOpenSoundChance: 0.6
 --- !u!82 &5402558
 AudioSource:
@@ -1085,6 +1086,7 @@ MonoBehaviour:
   DoorLockedSounds:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
+  DoorKeySound: {fileID: 8300000, guid: c68bb5ab216dc449a860187d41f3d1af, type: 3}
   DoorOpenSoundChance: 0.6
 --- !u!82 &93929254
 AudioSource:
@@ -4370,6 +4372,7 @@ MonoBehaviour:
   DoorLockedSounds:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
+  DoorKeySound: {fileID: 8300000, guid: c68bb5ab216dc449a860187d41f3d1af, type: 3}
   DoorOpenSoundChance: 0.6
 --- !u!82 &540762772
 AudioSource:
@@ -7151,6 +7154,7 @@ MonoBehaviour:
   DoorLockedSounds:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
+  DoorKeySound: {fileID: 8300000, guid: c68bb5ab216dc449a860187d41f3d1af, type: 3}
   DoorOpenSoundChance: 0.6
 --- !u!82 &923928258
 AudioSource:
@@ -7505,6 +7509,7 @@ MonoBehaviour:
   DoorLockedSounds:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
+  DoorKeySound: {fileID: 8300000, guid: c68bb5ab216dc449a860187d41f3d1af, type: 3}
   DoorOpenSoundChance: 0.6
 --- !u!82 &941156012
 AudioSource:
@@ -8528,6 +8533,7 @@ MonoBehaviour:
   DoorLockedSounds:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
+  DoorKeySound: {fileID: 8300000, guid: c68bb5ab216dc449a860187d41f3d1af, type: 3}
   DoorOpenSoundChance: 0.6
 --- !u!82 &1051856270
 AudioSource:
@@ -17632,6 +17638,7 @@ MonoBehaviour:
   DoorLockedSounds:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
+  DoorKeySound: {fileID: 8300000, guid: c68bb5ab216dc449a860187d41f3d1af, type: 3}
   DoorOpenSoundChance: 0.6
 --- !u!82 &2124732313
 AudioSource:
