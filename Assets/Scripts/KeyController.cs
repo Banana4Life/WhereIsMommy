@@ -25,6 +25,6 @@ public class KeyController : CollisionController
                 break;
         }
 
-        TextController.Get().ShowText("I found a key!", Color.red, 4f);
+        TextController.Get().ShowText("I found a key!", TextController.red, 4f);
     }
 }

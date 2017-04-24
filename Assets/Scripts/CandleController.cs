@@ -35,11 +35,11 @@ public class CandleController : CollisionController
                 playerController.Carry().carryMatches--;
                 lit = true;
                 UpdateLight();
-                TextController.Get().ShowText("Finally some light!", Color.red, 4f);
+                TextController.Get().ShowText("Finally some light!", TextController.red, 4f);
             }
             else
             {
-                TextController.Get().ShowText("This candle is no match for me!", Color.red, 4f);
+                TextController.Get().ShowText("This candle is no match for me!", TextController.red, 4f);
             }
         }
         if (lit)

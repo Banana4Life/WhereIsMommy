@@ -21,7 +21,7 @@ public class SweetsController : CollisionController
     {
         playerController.ForceMovement(gameObject.transform.position);
         pc = playerController;
-        TextController.Get().ShowText("Mhhm. Sweets!", Color.red, 2f);
+        TextController.Get().ShowText("Mhhm. Sweets!", TextController.red, 2f);
         Invoke("StopEating", 2f);
     }
 

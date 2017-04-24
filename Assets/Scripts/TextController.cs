@@ -7,6 +7,8 @@ public class TextController : MonoBehaviour
 {
     public GameObject textObject;
 
+    public static Color red = new Color(197/255f, 46/255f ,36/255f);
+
     public void ShowText(string text, Color color, float hideIn = 0f)
     {
         var theText = textObject.GetComponent<Text>();

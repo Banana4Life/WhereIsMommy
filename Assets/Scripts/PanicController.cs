@@ -52,11 +52,11 @@ public class PanicController : MonoBehaviour
             {
                 if (hasTeddy)
                 {
-                    TextController.Get().ShowText("I am sure I saw something move in the dark!", Color.red, 4f);
+                    TextController.Get().ShowText("I am sure I saw something move in the dark!", TextController.red, 4f);
                 }
                 else
                 {
-                    TextController.Get().ShowText("It's too dark. I need my Teddy!", Color.red, 4f);
+                    TextController.Get().ShowText("It's too dark. I need my Teddy!", TextController.red, 4f);
                 }
                 playerCtrl.ForceMovement(ReturnTo.transform.position);
                 playerCtrl.Panic = true;
