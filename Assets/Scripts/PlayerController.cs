@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public int velocity;
     public bool Panic = false;
     public AudioMixer mixer;
+    public int rotationSpeed = 250;
 
     public List<char> combination;
     public int buttonsPressed = 0;
@@ -155,6 +156,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private Ray ray;
+
     private void RotateToMouse()
     {
         RaycastHit hit;
@@ -166,7 +168,7 @@ public class PlayerController : MonoBehaviour
             hitPoint.y = gameObject.transform.position.y;
             var toRot = Quaternion.LookRotation(hitPoint - gameObject.transform.position);
             var fromRot = gameObject.transform.rotation;
-            gameObject.transform.rotation = Quaternion.RotateTowards(fromRot, toRot, 220 * Time.deltaTime);
+            gameObject.transform.rotation = Quaternion.RotateTowards(fromRot, toRot, rotationSpeed * Time.deltaTime);
         }
     }
 
