@@ -75,8 +75,11 @@ public class DoorController : MonoBehaviour
 
     private void PlaySoundLocked()
     {
-        var clip = DoorLockedSounds[UnityEngine.Random.Range(0, DoorLockedSounds.Length)];
-        audioSource.PlayOneShot(clip, SoundVolumeScale);
+        if (!audioSource.isPlaying)
+        {
+            var clip = DoorLockedSounds[UnityEngine.Random.Range(0, DoorLockedSounds.Length)];
+            audioSource.PlayOneShot(clip, SoundVolumeScale);
+        }
     }
 
     public void ChangeState(bool open)
