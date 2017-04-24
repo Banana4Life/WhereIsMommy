@@ -18,6 +18,7 @@ public class PanicController : MonoBehaviour
     public AudioSource heartbeatSource;
     public AudioClip panicTeddy;
     public AudioClip panicDark;
+    public AudioClip panicDark2;
     public AudioSource musicSource;
     public float MinHeartbeatVolume;
 
@@ -56,7 +57,14 @@ public class PanicController : MonoBehaviour
                 if (hasTeddy)
                 {
                     TextController.Get().ShowText("GASP!", TextController.red, 4f);
-                    playerCtrl.voiceSource.PlayOneShot(panicDark);
+                    if (UnityEngine.Random.value > 0.5f)
+                    {
+                        playerCtrl.voiceSource.PlayOneShot(panicDark);
+                    }
+                    else
+                    {
+                        playerCtrl.voiceSource.PlayOneShot(panicDark2);
+                    }
                 }
                 else
                 {
