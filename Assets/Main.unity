@@ -2389,7 +2389,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 254897429}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Furniture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6314,6 +6314,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1956814423007268, guid: aeb5a0315cba24420b3259d8f3e12133, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605728510323604, guid: aeb5a0315cba24420b3259d8f3e12133, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aeb5a0315cba24420b3259d8f3e12133, type: 2}
   m_IsPrefabParent: 0
@@ -7045,6 +7053,14 @@ Prefab:
     - target: {fileID: 1169144165854356, guid: 8212574a05f5e418486e77dedb4e259f, type: 2}
       propertyPath: m_Name
       value: CabinetSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169144165854356, guid: 8212574a05f5e418486e77dedb4e259f, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110236897329210, guid: 8212574a05f5e418486e77dedb4e259f, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8212574a05f5e418486e77dedb4e259f, type: 2}
@@ -9810,7 +9826,7 @@ GameObject:
   - component: {fileID: 1198542802}
   - component: {fileID: 1198542804}
   - component: {fileID: 1198542805}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ModelCabinetBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16191,7 +16207,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1961303949}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CabinetBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
