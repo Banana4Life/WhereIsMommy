@@ -1,12 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.WSA;
 
 public class CameraController : MonoBehaviour
 {
     public Camera cam;
     public GameObject worldModel;
-    private bool tilted = false;
+    public float tilt = 0;
+    public float tiltSpeed = 35;
 
     public Vector3 camOffset = new Vector3(0, 15, -5);
     public Vector3 untiltedOffset;
@@ -31,22 +34,23 @@ public class CameraController : MonoBehaviour
 	    if (raycast)
 	    {
 	        var hitWorld = hit.collider.gameObject == worldModel;
-	        Debug.Log(hit.collider.name);
 	        Vector3 rotAxis = Vector3.Cross(camOffset, Vector3.up);
-	        if (hitWorld && !tilted)
+	        if (hitWorld && tilt < 15)
 	        {
-	            untiltedOffset = camOffset;
-	            cam.transform.RotateAround(playerPos, rotAxis, 15);
+	            var newTilt = Math.Min(15, tilt + Time.deltaTime * tiltSpeed);
+                cam.transform.RotateAround(playerPos, rotAxis, Time.deltaTime * tiltSpeed);
 	            camOffset = cam.transform.position - transform.position;
-	            tilted = true;
+	            tilt = newTilt;
 	        }
-	        else if (!hitWorld && tilted)
+	        else if (!hitWorld && tilt > 0)
 	        {
-	            cam.transform.RotateAround(playerPos, rotAxis, -15);
-	            camOffset = untiltedOffset;
-	            tilted = false;
+	            var newTilt = Math.Max(0, tilt - Time.deltaTime * tiltSpeed);
+	            cam.transform.RotateAround(playerPos, rotAxis, -Time.deltaTime * tiltSpeed);
+	            camOffset = cam.transform.position - transform.position;
+	            tilt = newTilt;
 	        }
 	    }
+
 	}
 
     private void OnDrawGizmos()
