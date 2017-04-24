@@ -69,7 +69,8 @@ public class PanicController : MonoBehaviour
                 else
                 {
                     TextController.Get().ShowText("It's too dark. I need my Teddy!", TextController.red, 4f);
-                    playerCtrl.voiceSource.PlayOneShot(panicTeddy);
+                    //playerCtrl.voiceSource.PlayOneShot(panicTeddy);
+                    playerCtrl.voiceSource.PlayOneShot(panicDark2);
                 }
                 playerCtrl.ForceMovement(ReturnTo.transform.position);
                 playerCtrl.Panic = true;
