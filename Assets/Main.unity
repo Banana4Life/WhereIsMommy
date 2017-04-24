@@ -403,7 +403,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4243267950648710, guid: 8d86746ab01bd43568d05e352a4d09c5, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1524174500844048, guid: 8d86746ab01bd43568d05e352a4d09c5, type: 2}
       propertyPath: m_Name
@@ -2592,7 +2592,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4243267950648710, guid: 8d86746ab01bd43568d05e352a4d09c5, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4243267950648710, guid: 8d86746ab01bd43568d05e352a4d09c5, type: 2}
       propertyPath: m_LocalScale.x
@@ -6833,7 +6833,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4243267950648710, guid: 8d86746ab01bd43568d05e352a4d09c5, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114324123585406516, guid: 8d86746ab01bd43568d05e352a4d09c5,
         type: 2}
@@ -12402,7 +12402,7 @@ AudioSource:
   m_GameObject: {fileID: 1659018928}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 0617be51ef9ae4d50b5c241f5650e6c4,
+  OutputAudioMixerGroup: {fileID: 243348546378916054, guid: 0617be51ef9ae4d50b5c241f5650e6c4,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: f0441d1e72bb5b645a4f43ecce7ca512, type: 3}
   m_PlayOnAwake: 1
@@ -12955,7 +12955,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4243267950648710, guid: 8d86746ab01bd43568d05e352a4d09c5, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1524174500844048, guid: 8d86746ab01bd43568d05e352a4d09c5, type: 2}
       propertyPath: m_Name
@@ -14028,7 +14028,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4243267950648710, guid: 8d86746ab01bd43568d05e352a4d09c5, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1524174500844048, guid: 8d86746ab01bd43568d05e352a4d09c5, type: 2}
       propertyPath: m_Name
@@ -14145,7 +14145,7 @@ Prefab:
     - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
         type: 2}
       propertyPath: musicSource
-      value:
+      value: 
       objectReference: {fileID: 1659018934}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
