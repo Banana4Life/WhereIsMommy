@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 5402555}
   - component: {fileID: 5402557}
   - component: {fileID: 5402556}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightOpeningDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,6 +874,18 @@ Prefab:
       propertyPath: m_Materials.Array.data[4]
       value: 
       objectReference: {fileID: 2100000, guid: f2f6673f8a8e130478de49aa672eb476, type: 2}
+    - target: {fileID: 1543958018676558, guid: 054429dc134a744dea88ce3bf4fe16c9, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045971614496242, guid: 054429dc134a744dea88ce3bf4fe16c9, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265820922734526, guid: 054429dc134a744dea88ce3bf4fe16c9, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 054429dc134a744dea88ce3bf4fe16c9, type: 2}
   m_IsPrefabParent: 0
@@ -924,7 +936,7 @@ GameObject:
   - component: {fileID: 93929251}
   - component: {fileID: 93929253}
   - component: {fileID: 93929252}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightOpeningDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1369,7 +1381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 149994244}
   - component: {fileID: 149994245}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1417,7 +1429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150725672}
   - component: {fileID: 150725673}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1988,7 +2000,7 @@ GameObject:
   - component: {fileID: 241827723}
   - component: {fileID: 241827722}
   - component: {fileID: 241827721}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ModelDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2853,7 +2865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 362575816}
   - component: {fileID: 362575817}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3355,7 +3367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 410427499}
   - component: {fileID: 410427500}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4037,7 +4049,7 @@ GameObject:
   - component: {fileID: 540762769}
   - component: {fileID: 540762771}
   - component: {fileID: 540762770}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightOpeningDoor_Out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6170,7 +6182,7 @@ GameObject:
   - component: {fileID: 833596712}
   - component: {fileID: 833596711}
   - component: {fileID: 833596710}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ModelDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6700,7 +6712,7 @@ GameObject:
   - component: {fileID: 923928255}
   - component: {fileID: 923928257}
   - component: {fileID: 923928256}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightOpeningDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6964,7 +6976,7 @@ GameObject:
   - component: {fileID: 941156009}
   - component: {fileID: 941156011}
   - component: {fileID: 941156010}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightOpeningDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7390,7 +7402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006849075}
   - component: {fileID: 1006849076}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7883,7 +7895,7 @@ GameObject:
   - component: {fileID: 1051856267}
   - component: {fileID: 1051856269}
   - component: {fileID: 1051856268}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightOpeningDoor_In
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8836,7 +8848,7 @@ GameObject:
   - component: {fileID: 1193043378}
   - component: {fileID: 1193043377}
   - component: {fileID: 1193043376}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ModelDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10010,7 +10022,7 @@ GameObject:
   - component: {fileID: 1357577229}
   - component: {fileID: 1357577228}
   - component: {fileID: 1357577227}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ModelDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10810,7 +10822,7 @@ GameObject:
   - component: {fileID: 1425863008}
   - component: {fileID: 1425863007}
   - component: {fileID: 1425863006}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ModelDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11506,7 +11518,7 @@ GameObject:
   - component: {fileID: 1552630423}
   - component: {fileID: 1552630422}
   - component: {fileID: 1552630421}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ModelDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13239,7 +13251,7 @@ GameObject:
   - component: {fileID: 1723857622}
   - component: {fileID: 1723857621}
   - component: {fileID: 1723857620}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ModelDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14613,7 +14625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1887926599}
   - component: {fileID: 1887926600}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15425,7 +15437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1981267520}
   - component: {fileID: 1981267521}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16565,7 +16577,7 @@ GameObject:
   - component: {fileID: 2124732310}
   - component: {fileID: 2124732312}
   - component: {fileID: 2124732311}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightOpeningDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

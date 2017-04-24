@@ -6,7 +6,6 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Camera cam;
-    public GameObject worldModel;
     public float tilt = 0;
     public float tiltSpeed = 35;
 
@@ -32,16 +31,16 @@ public class CameraController : MonoBehaviour
 	    var raycast = Physics.Raycast(cameraPos, playerPos - cameraPos, out hit);
 	    if (raycast)
 	    {
-	        var hitWorld = hit.collider.gameObject == worldModel;
+	        var hitBlocking = hit.collider.gameObject.layer == 11;
 	        Vector3 rotAxis = Vector3.Cross(camOffset, Vector3.up);
-	        if (hitWorld && tilt < 15)
+	        if (hitBlocking && tilt < 15)
 	        {
 	            var newTilt = Math.Min(15, tilt + Time.deltaTime * tiltSpeed);
                 cam.transform.RotateAround(playerPos, rotAxis, Time.deltaTime * tiltSpeed);
 	            camOffset = cam.transform.position - transform.position;
 	            tilt = newTilt;
 	        }
-	        else if (!hitWorld && tilt > 0)
+	        else if (!hitBlocking && tilt > 0)
 	        {
 	            var newTilt = Math.Max(0, tilt - Time.deltaTime * tiltSpeed);
 	            cam.transform.RotateAround(playerPos, rotAxis, -Time.deltaTime * tiltSpeed);
