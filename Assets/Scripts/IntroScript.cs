@@ -48,7 +48,7 @@ public class IntroScript : MonoBehaviour
 	            }
 	            break;
             case IntroState.MotherTalking:
-                TextController.Get().ShowText("Do not leave the room. We are back soon.", Color.red, 3f);
+                TextController.Get().ShowText("Do not leave the room. We are back soon.", new Color(150/255f, 193/255f, 72/255f), 3f);
                 timeLeft -= Time.deltaTime;
                 if (timeLeft <= 0)
                 {
