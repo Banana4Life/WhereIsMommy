@@ -7,6 +7,8 @@ public class KeyController : CollisionController
 {
     public string keyName;
 
+    public AudioClip pickupSound;
+
     protected override void handle(PlayerController playerController)
     {
         gameObject.SetActive(false);
@@ -26,5 +28,6 @@ public class KeyController : CollisionController
         }
 
         TextController.Get().ShowText("I found a key!", TextController.red, 4f);
+        playerController.gameObject.GetComponent<AudioSource>().PlayOneShot(pickupSound);
     }
 }
