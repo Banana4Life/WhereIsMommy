@@ -34,6 +34,11 @@ public class PlayerController : MonoBehaviour
     public bool forceMovement;
     public bool sugarRush;
 
+    public GameObject bigDoor;
+    public Mesh bigDoorOpen;
+    public GameObject bigDoorPlane;
+    public GameObject bigDoorSpotlight;
+
     // Use this for initialization
     void Start()
     {
@@ -67,7 +72,9 @@ public class PlayerController : MonoBehaviour
             if (buttonsPressed == 3)
             {
                 Debug.Log("Exit is now Open");
-                // TODO open door
+                bigDoor.GetComponentInChildren<MeshFilter>().mesh = bigDoorOpen;
+                bigDoorPlane.SetActive(true);
+                bigDoorSpotlight.SetActive(true);
             }
 
             return true;
