@@ -19,8 +19,8 @@ public class ButtonController : CollisionController
 
     public void SetButtonLetter(char newLetter)
     {
-        this.letter = newLetter;
-        int textureOffset = 'A' - letter;
+        letter = newLetter;
+        int textureOffset = letter - 'A';
         texture = Textures[textureOffset];
     }
 

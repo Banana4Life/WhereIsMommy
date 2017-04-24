@@ -37,9 +37,9 @@ public class PlayerController : MonoBehaviour
         int i = 0;
         foreach (var btn in GameObject.FindGameObjectsWithTag("Button"))
         {
-            i++;
             var buttonController = btn.GetComponent<ButtonController>();
             buttonController.SetButtonLetter(combination[i]);
+            i++;
         }
         forceMovement = false;
         buttonsPressed = 0;
