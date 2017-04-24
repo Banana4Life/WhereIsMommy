@@ -5031,6 +5031,7 @@ GameObject:
   - component: {fileID: 627107129}
   - component: {fileID: 627107131}
   - component: {fileID: 627107130}
+  - component: {fileID: 627107132}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -5092,6 +5093,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 627107128}
+  m_Mesh: {fileID: 4300000, guid: b2146bc6eea9bd249bd46f1ca7c47de5, type: 3}
+--- !u!64 &627107132
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627107128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: b2146bc6eea9bd249bd46f1ca7c47de5, type: 3}
 --- !u!1 &631685962
 GameObject:
@@ -15655,6 +15670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921971981}
   - component: {fileID: 1921971982}
+  - component: {fileID: 1921971983}
   m_Layer: 0
   m_Name: BigDoorBlueClosed
   m_TagString: Untagged
@@ -15760,6 +15776,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1921971983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1921971980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ce7dc30cb64454a801fdb3d262b653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1930290495
 GameObject:
   m_ObjectHideFlags: 0
