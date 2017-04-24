@@ -350,6 +350,9 @@ MonoBehaviour:
   RequiredKey: 
   ClockWise: 0
   RotationSpeed: 225
+  DoorOpenSounds: []
+  DoorLockedSounds: []
+  DoorOpenSoundChance: 0.6
 --- !u!1 &187419094
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +605,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1714177456997804, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82948202604465208, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
