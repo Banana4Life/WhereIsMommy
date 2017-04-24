@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class ButtonController : CollisionController
 {
     public Material[] Materials;
     public GameObject Letter;
 
+    private AudioSource audioSource;
     private Light statusLight;
     private char letterChar;
 
@@ -15,6 +17,7 @@ public class ButtonController : CollisionController
     {
         statusLight = GetComponentInChildren<Light>();
         statusLight.enabled = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void SetButtonLetter(char newLetter)
@@ -30,13 +33,13 @@ public class ButtonController : CollisionController
     {
         var correctOrder = playerController.OnButtonPress(letterChar);
         EnableLight(correctOrder);
-        PlaySound(correctOrder);
+        PlaySound();
 
     }
 
-    private void PlaySound(bool good)
+    private void PlaySound()
     {
-        // TODO implement me!
+        audioSource.Play();
     }
 
 
