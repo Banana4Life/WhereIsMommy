@@ -20,6 +20,9 @@ public class KeyController : CollisionController
             case "Key2":
                 playerController.Carry().carryKey2 = true;
                 break;
+            case "Key3":
+                playerController.Carry().carryKey3 = true;
+                break;
         }
 
         TextController.Get().ShowText("I found a key!", Color.red, 4f);
