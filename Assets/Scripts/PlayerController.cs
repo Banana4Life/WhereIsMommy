@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
     {
         RaycastHit hit;
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawLine(ray.origin, gameObject.transform.position, Color.red);
+        //Debug.DrawLine(ray.origin, gameObject.transform.position, Color.red);
         if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
         {
             var hitPoint = hit.point;
