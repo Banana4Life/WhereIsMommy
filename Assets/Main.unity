@@ -1185,8 +1185,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 911b18dc738310542a6e674c66c7bd94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   girl: {fileID: 2025047325}
 --- !u!4 &106663489
 Transform:
@@ -10424,6 +10424,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1343903581}
   m_Mesh: {fileID: 4300000, guid: f45a6fe8010b10d44acaa7d57e97fecf, type: 3}
+--- !u!1 &1353422553 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1265820922734526, guid: 054429dc134a744dea88ce3bf4fe16c9,
+    type: 2}
+  m_PrefabInternal: {fileID: 75887400}
 --- !u!1 &1357577225
 GameObject:
   m_ObjectHideFlags: 0
@@ -11019,8 +11024,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 0
@@ -15156,6 +15161,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 371567768}
+  - {fileID: 912268619}
+  - {fileID: 744688663}
   - {fileID: 1620147271}
   - {fileID: 1596748872}
   - {fileID: 614351512}
@@ -16560,16 +16567,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: ReturnTo
-      value: 
-      objectReference: {fileID: 676812400}
     - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
         type: 2}
       propertyPath: cam
       value: 
       objectReference: {fileID: 1659018932}
+    - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: worldModel
+      value:
+      objectReference: {fileID: 1353422553}
+    - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: ReturnTo
+      value:
+      objectReference: {fileID: 676812400}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
   m_IsPrefabParent: 0
