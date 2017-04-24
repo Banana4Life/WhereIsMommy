@@ -38,5 +38,9 @@ public class BigDoorController : CollisionController
         {
             triggered = true;
         }
+        else
+        {
+            TextController.Get().ShowText("Its too heavy to move!", Color.red, 5f);
+        }
     }
 }

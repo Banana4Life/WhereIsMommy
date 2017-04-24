@@ -5188,6 +5188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ce7dc30cb64454a801fdb3d262b653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  needPassed: 3
   blend: {fileID: 113860904}
 --- !u!1 &631685962
 GameObject:
@@ -5954,7 +5955,6 @@ Transform:
   - {fileID: 795858106}
   - {fileID: 400808738}
   - {fileID: 1622439634}
-  - {fileID: 1921971981}
   m_Father: {fileID: 665000920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13812,6 +13812,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1195124434}
+  - {fileID: 1921971981}
   m_Father: {fileID: 665000920}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15779,8 +15780,8 @@ Transform:
   - {fileID: 627107129}
   - {fileID: 633644555}
   - {fileID: 1669155118}
-  m_Father: {fileID: 740949931}
-  m_RootOrder: 3
+  m_Father: {fileID: 1712773613}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!82 &1921971982
 AudioSource:
@@ -15792,8 +15793,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243969973419737812, guid: 0617be51ef9ae4d50b5c241f5650e6c4,
     type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: be6ea1bf6a1fa6a45bed4b46e18061ec, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
