@@ -93,12 +93,16 @@ public class PlayerController : MonoBehaviour
         return carry;
     }
 
+    private bool canClose = false;
+
     // Update is called once per frame
     void Update()
     {
         UpdateInternalVelocity();
         UpdateAnimationSpeed();
         UpdateSound();
+
+        CheckClose();
 
         if (!forceMovement)
         {
@@ -122,6 +126,28 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+    }
+
+    private void CheckClose()
+    {
+        if (Input.GetKeyDown("escape"))
+        {
+            if (canClose)
+            {
+                Application.Quit();
+            }
+            else
+            {
+                TextController.Get().ShowText("Press ESC again to leave her to die!", Color.white, 5f);
+                canClose = true;
+                Invoke("DoNotClose", 5f);
+            }
+        }
+    }
+
+    private void DoNotClose()
+    {
+        canClose = false;
     }
 
     private void UpdateSound()

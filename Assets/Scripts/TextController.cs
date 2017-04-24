@@ -17,6 +17,7 @@ public class TextController : MonoBehaviour
         textObject.SetActive(true);
         if (hideIn > 0)
         {
+            CancelInvoke("HideTextIn");
             HideTextIn(hideIn);
         }
     }
