@@ -6947,6 +6947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyName: Key2
+  pickupSound: {fileID: 8300000, guid: 7c5e0642c43e482448351ed1cf3d2e34, type: 3}
 --- !u!1 &933832199
 GameObject:
   m_ObjectHideFlags: 0
@@ -14974,6 +14975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyName: Key1
+  pickupSound: {fileID: 8300000, guid: 7c5e0642c43e482448351ed1cf3d2e34, type: 3}
 --- !u!1 &1921971980
 GameObject:
   m_ObjectHideFlags: 0
@@ -15890,6 +15892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyName: Key3
+  pickupSound: {fileID: 8300000, guid: 7c5e0642c43e482448351ed1cf3d2e34, type: 3}
 --- !u!4 &2002070292
 Transform:
   m_ObjectHideFlags: 0
