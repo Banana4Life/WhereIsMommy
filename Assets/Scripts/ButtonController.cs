@@ -44,14 +44,17 @@ public class ButtonController : CollisionController
     {
         statusLight.color = good ? Color.green : Color.red;
         statusLight.enabled = true;
-        if (!IsInvoking("DisableLight"))
+        if (!good && !IsInvoking("DisableLights"))
         {
-            Invoke("DisableLight", 3f);
+            Invoke("DisableLights", 3f);
         }
     }
 
-    private void DisableLight()
+    private void DisableLights()
     {
-        statusLight.enabled = false;
+        foreach (var button in GameObject.FindGameObjectsWithTag("Button"))
+        {
+            button.GetComponent<ButtonController>().statusLight.enabled = false;
+        }
     }
 }
