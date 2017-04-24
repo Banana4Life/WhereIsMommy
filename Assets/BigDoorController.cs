@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class BigDoorController : CollisionController
 {
 
+    public int needPassed = 3;
     public GameObject blend;
 
     private float blendSpeed = 0.1f;
@@ -33,7 +34,7 @@ public class BigDoorController : CollisionController
 
     protected override void handle(PlayerController pc)
     {
-        if (pc.buttonsPressed == 3)
+        if (pc.buttonsPressed == needPassed)
         {
             triggered = true;
         }
