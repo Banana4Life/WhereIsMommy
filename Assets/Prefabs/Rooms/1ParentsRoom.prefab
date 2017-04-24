@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 33405609927333776}
   - component: {fileID: 23332823975366806}
   - component: {fileID: 64849603921437692}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ModelBed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 33108407648067068}
   - component: {fileID: 23244447919351362}
   - component: {fileID: 64052043997066948}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ModelBed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4679792721175854}
   - component: {fileID: 208946116547719806}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 54852081451184514}
   - component: {fileID: 114455442271659032}
   m_Layer: 0
-  m_Name: Button_2
+  m_Name: Button_3
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -454,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4008437180840950}
   - component: {fileID: 208369144832784276}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bed (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1982,6 +1982,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: dd31ec3ca91379441820e13cc0a8717b, type: 2}
   - {fileID: 2100000, guid: 9cc61c4c662b52c40885540639a937e0, type: 2}
   - {fileID: 2100000, guid: bde9dc44b9892304eb9364604fbe471f, type: 2}
+  Letter: {fileID: 1498701627185678}
 --- !u!114 &114471891349712814
 MonoBehaviour:
   m_ObjectHideFlags: 1

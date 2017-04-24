@@ -20,8 +20,8 @@ public class ButtonController : CollisionController
     public void SetButtonLetter(char newLetter)
     {
         letterChar = newLetter;
-        int textureOffset = newLetter - 'A';
-        var material = Materials[textureOffset];
+        int materialOffset = newLetter - 'A';
+        var material = Materials[materialOffset];
         var letterRenderer = Letter.GetComponent<Renderer>();
         letterRenderer.material = material;
     }

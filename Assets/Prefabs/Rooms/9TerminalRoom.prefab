@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 54826961824232226}
   - component: {fileID: 114934618978982728}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Button_2
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1736,10 +1736,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57cc3f901287ae4884019a28696d263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Textures:
-  - {fileID: 2800000, guid: c6ef7db74d6632a4597e410181654ad7, type: 3}
-  - {fileID: 2800000, guid: a3ebcd2dd913b98478caee8e62e07b3f, type: 3}
-  - {fileID: 2800000, guid: 61fb1b391f8038b499443ae71df507d9, type: 3}
+  Materials:
+  - {fileID: 2100000, guid: dd31ec3ca91379441820e13cc0a8717b, type: 2}
+  - {fileID: 2100000, guid: 9cc61c4c662b52c40885540639a937e0, type: 2}
+  - {fileID: 2100000, guid: bde9dc44b9892304eb9364604fbe471f, type: 2}
+  Letter: {fileID: 1095200034943262}
 --- !u!208 &208310329341900988
 NavMeshObstacle:
   m_ObjectHideFlags: 1
