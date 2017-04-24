@@ -14883,7 +14883,7 @@ Prefab:
         type: 2}
       propertyPath: panicDark
       value: 
-      objectReference: {fileID: 8300000, guid: 4bdcc3dd940d14c96a61e6411a4c5c59, type: 3}
+      objectReference: {fileID: 8300000, guid: a4cb6015ea9444c7f89a811708493a2c, type: 3}
     - target: {fileID: 114116795835843362, guid: 1c07278cd5d5249b7af2f5a1c846c058,
         type: 2}
       propertyPath: carryKey1

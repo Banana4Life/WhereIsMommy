@@ -56,13 +56,11 @@ public class PanicController : MonoBehaviour
                 if (hasTeddy)
                 {
                     TextController.Get().ShowText("GASP!", TextController.red, 4f);
-                    //playerCtrl.voiceSource.clip = panicDark;
-                    // TODO *gasp*? playerCtrl.voiceSource.PlayOneShot(panicDark);
+                    playerCtrl.voiceSource.PlayOneShot(panicDark);
                 }
                 else
                 {
                     TextController.Get().ShowText("It's too dark. I need my Teddy!", TextController.red, 4f);
-                    //playerCtrl.voiceSource.clip = panicTeddy;
                     playerCtrl.voiceSource.PlayOneShot(panicTeddy);
                 }
                 playerCtrl.ForceMovement(ReturnTo.transform.position);
