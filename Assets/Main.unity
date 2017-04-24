@@ -6446,7 +6446,6 @@ GameObject:
   m_Component:
   - component: {fileID: 795858106}
   - component: {fileID: 795858109}
-  - component: {fileID: 795858108}
   - component: {fileID: 795858107}
   m_Layer: 10
   m_Name: BloodSmear_Decal
@@ -6502,21 +6501,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &795858108
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 64145369176840762, guid: b0161c7513d7d4f72abc9b1ab8dd3164,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 795858105}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &795858109
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11473,6 +11457,24 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &1424628208 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 510f12302d536ca4aae88b4317e91669, type: 3}
+  m_PrefabInternal: {fileID: 354297521}
+--- !u!64 &1424628209
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424628208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 510f12302d536ca4aae88b4317e91669, type: 3}
 --- !u!1 &1425863004
 GameObject:
   m_ObjectHideFlags: 0
