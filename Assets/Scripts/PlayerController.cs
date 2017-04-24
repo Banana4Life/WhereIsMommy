@@ -22,7 +22,12 @@ public class PlayerController : MonoBehaviour
     public AudioMixer mixer;
     public int rotationSpeed = 250;
 
+    [Header("Audio Sources")]
     public AudioSource voiceSource;
+    public AudioSource stepSource;
+
+    [Header("Audio Clips")]
+    public AudioClip[] stepSounds;
 
     public List<char> combination;
     public int buttonsPressed = 0;
@@ -48,7 +53,6 @@ public class PlayerController : MonoBehaviour
         var rand = new Random(DateTime.Now.Millisecond);
         combination = new List<char> {'A', 'B', 'C'}.OrderBy(a => rand.Next()).ToList();
         Debug.Log("The Combination is: " + combination[0]+ combination[1] + combination[2]);
-        int i = 0;
         var buttons = GameObject.FindGameObjectsWithTag("Button");
         buttons[0].GetComponent<ButtonController>().SetButtonLetter('A');
         buttons[1].GetComponent<ButtonController>().SetButtonLetter('B');
@@ -59,6 +63,25 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         navAgent = GetComponent<NavMeshAgent>();
         carry = GetComponent<CarryScript>();
+    }
+
+    private void OnModelCycle(int index)
+    {
+        Debug.Log("Model Index: " + index);
+        AudioClip clip;
+        if (index == 1)
+        {
+            clip = stepSounds[0];
+        }
+        else if (index == 3)
+        {
+            clip = stepSounds[1];
+        }
+        else
+        {
+            return;
+        }
+        stepSource.PlayOneShot(clip);
     }
 
     public bool OnButtonPress(char letter)

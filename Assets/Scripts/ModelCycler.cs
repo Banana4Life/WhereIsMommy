@@ -39,6 +39,7 @@ public class ModelCycler : MonoBehaviour
 	        {
 	            index = (index + 1) % meshes.Count;
 	            meshFilter.mesh = meshes[index];
+	            SendMessageUpwards("OnModelCycle", index);
 	            delayUntilNext = calculateNextDelay();
 	        }
 	        else
