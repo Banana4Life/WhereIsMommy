@@ -16,11 +16,12 @@ public class PanicController : MonoBehaviour
     public float PanicDecrease = 10;
     public GameObject ReturnTo;
     public AudioSource heartbeatSource;
+    public float MinHeartbeatVolume;
 
     // Update is called once per frame
     void Update()
     {
-        heartbeatSource.volume = Math.Min(PanicLevel / PanicThreshold, 1);
+        UpdateHeartbeatVolume();
         var candles = GameObject.FindGameObjectsWithTag("Candle");
         var inDarkness = !candles.Any(IsInLight);
         var playerCtrl = GetComponent<PlayerController>();
@@ -71,6 +72,12 @@ public class PanicController : MonoBehaviour
                 //PanicLevel = 0;
             }
         }
+    }
+
+    private void UpdateHeartbeatVolume()
+    {
+        var percentage = Math.Min(PanicLevel / PanicThreshold, 1);
+        heartbeatSource.volume = MinHeartbeatVolume + (1 - MinHeartbeatVolume) * percentage;
     }
 
     private static bool DidAgentReachDestination(NavMeshAgent agent)
