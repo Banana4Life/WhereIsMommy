@@ -43,7 +43,7 @@ public class PanicController : MonoBehaviour
         {
             increase = -PanicDecrease;
         }
-        PanicLevel = Math.Max(PanicLevel + increase * Time.deltaTime, 0f);
+        PanicLevel = Math.Min(450 ,Math.Max(PanicLevel + increase * Time.deltaTime, 0f));
 
         if (!playerCtrl.Panic)
         {
@@ -68,7 +68,7 @@ public class PanicController : MonoBehaviour
             {
                 playerCtrl.Panic = false;
                 playerCtrl.StopForceMovement();
-                PanicLevel = 0;
+                //PanicLevel = 0;
             }
         }
     }
