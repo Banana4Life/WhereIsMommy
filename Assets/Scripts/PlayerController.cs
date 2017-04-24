@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
 
     public bool OnButtonPress(char letter)
     {
+        bigDoor.GetComponent<AudioSource>().PlayDelayed(2f);
         if (lastButton == letter)
         {
             return buttonsPressed > 0;
@@ -74,6 +75,7 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Exit is now Open");
                 bigDoor.GetComponentInChildren<MeshFilter>().mesh = bigDoorOpen;
+                bigDoor.GetComponent<AudioSource>().Play();
                 bigDoorPlane.SetActive(true);
                 bigDoorSpotlight.SetActive(true);
             }
