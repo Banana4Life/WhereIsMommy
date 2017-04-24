@@ -15,10 +15,12 @@ public class PanicController : MonoBehaviour
     public float PanicIncreaseNoFlash = 30;
     public float PanicDecrease = 10;
     public GameObject ReturnTo;
+    public AudioSource heartbeatSource;
 
     // Update is called once per frame
     void Update()
     {
+        heartbeatSource.volume = Math.Min(PanicLevel / PanicThreshold, 1);
         var candles = GameObject.FindGameObjectsWithTag("Candle");
         var inDarkness = !candles.Any(IsInLight);
         var playerCtrl = GetComponent<PlayerController>();
