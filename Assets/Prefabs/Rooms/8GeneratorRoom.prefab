@@ -269,9 +269,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4332335098371070}
   - component: {fileID: 33413390540491854}
-  - component: {fileID: 64233416993609284}
   - component: {fileID: 23723389094731344}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Letter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1642,20 +1641,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f61fc1376e3707b49bdebbe07c897113, type: 3}
---- !u!64 &64233416993609284
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1355856100149320}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!64 &64494559096516788
 MeshCollider:
   m_ObjectHideFlags: 1
