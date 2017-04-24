@@ -1,8 +1,10 @@
 ﻿using System;
-using UnityEngine;
+using JetBrains.Annotations;
+using UnityEngine;using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class IntroScript : MonoBehaviour
 {
     private IntroState state;
@@ -14,27 +16,34 @@ public class IntroScript : MonoBehaviour
     public GameObject blend;
     public GameObject later;
 
+    private NavMeshAgent navAgent;
+    public GameObject Destination;
+    private Vector3 origin;
+
 	// Use this for initialization
 	void Start ()
 	{
 	    state = IntroState.MotherWalkingIn;
 	    motherTarget = new Vector3(-22.23f, 0, -24.74f);
+	    navAgent = GetComponent<NavMeshAgent>();
+	    origin = Vector3.zero + transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-	    float distance;
 	    switch (state)
 	    {
 	        case IntroState.MotherWalkingIn:
-	            distance = Math.Abs(Vector3.Distance(gameObject.transform.position, motherTarget));
-	            gameObject.transform.position += (motherTarget - gameObject.transform.position) * (speed / distance);
-
-	            if (distance < speed)
+	            if (!navAgent.enabled)
 	            {
+	                navAgent.enabled = true;
+	                navAgent.SetDestination(Destination.transform.position);
+	            }
+	            else if (navAgent.remainingDistance < navAgent.stoppingDistance)
+	            {
+	                navAgent.enabled = false;
 	                timeLeft = 3f;
-	                motherTarget = new Vector3(-26.24f, 0, -37.86f);
 	                state = IntroState.MotherTalking;
 	            }
 	            break;
@@ -47,11 +56,14 @@ public class IntroScript : MonoBehaviour
                 }
                 break;
             case IntroState.MotherWalkingOut:
-                distance = Math.Abs(Vector3.Distance(gameObject.transform.position, motherTarget));
-                gameObject.transform.position += (motherTarget - gameObject.transform.position) * (speed / distance);
-
-                if (Math.Abs(Vector3.Distance(gameObject.transform.position, motherTarget)) < speed)
+                if (!navAgent.enabled)
                 {
+                    navAgent.enabled = true;
+                    navAgent.SetDestination(origin);
+                }
+                else if (navAgent.remainingDistance < navAgent.stoppingDistance)
+                {
+                    navAgent.enabled = false;
                     state = IntroState.Blend;
                 }
                 break;
