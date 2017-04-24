@@ -14894,6 +14894,11 @@ Prefab:
       propertyPath: voiceSource
       value: 
       objectReference: {fileID: 1774957688}
+    - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: panicDark2
+      value: 
+      objectReference: {fileID: 8300000, guid: e53e9d98f1f947a45b5b1e2157479ba7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
   m_IsPrefabParent: 0
