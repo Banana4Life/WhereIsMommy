@@ -1659,8 +1659,9 @@ MonoBehaviour:
   Panic: 0
   mixer: {fileID: 24100000, guid: 0617be51ef9ae4d50b5c241f5650e6c4, type: 2}
   rotationSpeed: 250
-  trailPrefab: {fileID: 1099452213498982, guid: 2e2c988a5c3f44b39a43ccd08e6ce390,
+  trailPrefab: {fileID: 1420461109215536, guid: 94fe0c60d8b6d4f4ca62c05a69de22e0,
     type: 2}
+  bloodyTrail: 0
   voiceSource: {fileID: 82943820365165976}
   stepSource: {fileID: 82663157095822468}
   stepSounds:
