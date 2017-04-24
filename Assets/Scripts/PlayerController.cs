@@ -1,8 +1,10 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 using Random = System.Random;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float maxHighVelocity = 25f;
     public int velocity;
     public bool Panic = false;
+    public AudioMixer mixer;
 
     public List<char> combination;
     public int buttonsPressed = 0;
@@ -84,6 +87,7 @@ public class PlayerController : MonoBehaviour
     {
         UpdateInternalVelocity();
         UpdateAnimationSpeed();
+        UpdateSound();
 
         if (!forceMovement)
         {
@@ -107,6 +111,22 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+    }
+
+    private void UpdateSound()
+    {
+        var scroll = Input.GetAxis("Mouse ScrollWheel");
+        var volume = AudioListener.volume + scroll / 2;
+        AudioListener.volume = Clamp(volume, 0, 1);
+        if (scroll != 0)
+        {
+            TextController.Get().ShowText("Volume: " + (int)(AudioListener.volume * 100) + "%", Color.cyan, 1f);
+        }
+    }
+
+    public static float Clamp(float value, float min, float max)
+    {
+        return (value < min) ? min : (value > max) ? max : value;
     }
 
     private void UpdateAnimationSpeed()
