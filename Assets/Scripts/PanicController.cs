@@ -16,6 +16,8 @@ public class PanicController : MonoBehaviour
     public float PanicDecrease = 10;
     public GameObject ReturnTo;
     public AudioSource heartbeatSource;
+    public AudioClip panicTeddy;
+    public AudioClip panicDark;
     public AudioSource musicSource;
     public float MinHeartbeatVolume;
 
@@ -54,10 +56,14 @@ public class PanicController : MonoBehaviour
                 if (hasTeddy)
                 {
                     TextController.Get().ShowText("I am sure I saw something move in the dark!", TextController.red, 4f);
+                    playerCtrl.voiceSource.clip = panicDark;
+                    playerCtrl.voiceSource.Play();
                 }
                 else
                 {
                     TextController.Get().ShowText("It's too dark. I need my Teddy!", TextController.red, 4f);
+                    playerCtrl.voiceSource.clip = panicTeddy;
+                    playerCtrl.voiceSource.Play();
                 }
                 playerCtrl.ForceMovement(ReturnTo.transform.position);
                 playerCtrl.Panic = true;
