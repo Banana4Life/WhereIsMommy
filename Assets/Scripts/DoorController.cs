@@ -14,7 +14,6 @@ public class DoorController : MonoBehaviour
     public AudioClip[] DoorOpenSounds;
     public AudioClip[] DoorLockedSounds;
     public float DoorOpenSoundChance = 0.6f;
-    public float SoundVolumeScale = 0.7f;
 
     // internal
     private bool isOpen = false;
@@ -69,7 +68,7 @@ public class DoorController : MonoBehaviour
         if (UnityEngine.Random.value <= DoorOpenSoundChance)
         {
             var clip = DoorOpenSounds[UnityEngine.Random.Range(0, DoorOpenSounds.Length)];
-            audioSource.PlayOneShot(clip, SoundVolumeScale);
+            audioSource.PlayOneShot(clip);
         }
     }
 
@@ -78,7 +77,7 @@ public class DoorController : MonoBehaviour
         if (!audioSource.isPlaying)
         {
             var clip = DoorLockedSounds[UnityEngine.Random.Range(0, DoorLockedSounds.Length)];
-            audioSource.PlayOneShot(clip, SoundVolumeScale);
+            audioSource.PlayOneShot(clip);
         }
     }
 

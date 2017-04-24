@@ -180,7 +180,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
   DoorOpenSoundChance: 0.6
-  SoundVolumeScale: 0.7
 --- !u!82 &5402558
 AudioSource:
   m_ObjectHideFlags: 0
@@ -193,7 +192,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1087,7 +1086,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
   DoorOpenSoundChance: 0.6
-  SoundVolumeScale: 0.7
 --- !u!82 &93929254
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1100,7 +1098,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4305,7 +4303,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
   DoorOpenSoundChance: 0.6
-  SoundVolumeScale: 0.7
 --- !u!82 &540762772
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4318,7 +4315,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7058,7 +7055,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
   DoorOpenSoundChance: 0.6
-  SoundVolumeScale: 0.7
 --- !u!82 &923928258
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7071,7 +7067,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7413,7 +7409,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
   DoorOpenSoundChance: 0.6
-  SoundVolumeScale: 0.7
 --- !u!82 &941156012
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7426,7 +7421,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8437,7 +8432,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
   DoorOpenSoundChance: 0.6
-  SoundVolumeScale: 0.7
 --- !u!82 &1051856270
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8450,7 +8444,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17534,7 +17528,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 123b3bd840338a941bd6fc783ea8c13a, type: 3}
   - {fileID: 8300000, guid: eeee6316f26f7b24394c3edeb185d2c2, type: 3}
   DoorOpenSoundChance: 0.6
-  SoundVolumeScale: 0.7
 --- !u!82 &2124732313
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17547,7 +17540,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
   Loop: 0
   Mute: 0
