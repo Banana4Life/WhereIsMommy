@@ -16,6 +16,7 @@ public class PanicController : MonoBehaviour
     public float PanicDecrease = 10;
     public GameObject ReturnTo;
     public AudioSource heartbeatSource;
+    public AudioSource musicSource;
     public float MinHeartbeatVolume;
 
     // Update is called once per frame
@@ -78,6 +79,7 @@ public class PanicController : MonoBehaviour
     {
         var percentage = Math.Min(PanicLevel / PanicThreshold, 1);
         heartbeatSource.volume = MinHeartbeatVolume + (1 - MinHeartbeatVolume) * percentage;
+        musicSource.volume = 1 - (1 - MinHeartbeatVolume) * percentage / 1.5f;
     }
 
     private static bool DidAgentReachDestination(NavMeshAgent agent)

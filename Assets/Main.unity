@@ -14130,6 +14130,11 @@ Prefab:
       propertyPath: worldModel
       value: 
       objectReference: {fileID: 1353422553}
+    - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: musicSource
+      value: 
+      objectReference: {fileID: 1659018934}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
   m_IsPrefabParent: 0
