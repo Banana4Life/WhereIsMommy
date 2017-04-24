@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private NavMeshAgent navAgent;
     private CarryScript carry;
 
+    private char? lastButton;
+
     public bool forceMovement;
     public bool sugarRush;
 
@@ -51,14 +53,21 @@ public class PlayerController : MonoBehaviour
 
     public bool OnButtonPress(char letter)
     {
+        if (lastButton == letter)
+        {
+            return buttonsPressed > 0;
+        }
+        lastButton = letter;
         if (combination[buttonsPressed] == letter)
         {
             buttonsPressed++;
+            Debug.Log("Correct");
             if (buttonsPressed == 3)
             {
+                Debug.Log("Exit is now Open");
                 // TODO open door
             }
-            Debug.Log("Correct");
+
             return true;
         }
         Debug.Log("Wrong");
