@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
     private GameObject trail;
     private int stepCount = 0;
 
+    private Quaternion targetRotation;
+
     // Use this for initialization
     void Start()
     {
@@ -232,17 +234,29 @@ public class PlayerController : MonoBehaviour
 
     private void RotateToMouse()
     {
-        RaycastHit hit;
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //Debug.DrawLine(ray.origin, gameObject.transform.position, Color.red);
-        if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
+        // Mouse input if mouse moved
+        if (Mathf.Abs(Input.GetAxisRaw("Mouse X")) > 0 || Mathf.Abs(Input.GetAxisRaw("Mouse Y")) > 0)
         {
-            var hitPoint = hit.point;
-            hitPoint.y = gameObject.transform.position.y;
-            var toRot = Quaternion.LookRotation(hitPoint - gameObject.transform.position);
-            var fromRot = gameObject.transform.rotation;
-            gameObject.transform.rotation = Quaternion.RotateTowards(fromRot, toRot, rotationSpeed * Time.deltaTime);
+            RaycastHit hit;
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //Debug.DrawLine(ray.origin, gameObject.transform.position, Color.red);
+            if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
+            {
+                var hitPoint = hit.point;
+                hitPoint.y = transform.position.y;
+                targetRotation = Quaternion.LookRotation(hitPoint - transform.position);
+            }
         }
+
+        // Controller input if right stick is used
+        var controllerX = Input.GetAxis("Right Stick X Axis");
+        var controllerY = Input.GetAxis("Right Stick Y Axis");
+        if (Mathf.Abs(controllerX) > 0 || Mathf.Abs(controllerY) > 0)
+        {
+            targetRotation = Quaternion.LookRotation(new Vector3(controllerX, 0, controllerY));
+        }
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
     public void StopForceMovement()
