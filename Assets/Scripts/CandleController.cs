@@ -18,6 +18,8 @@ public class CandleController : CollisionController
         {
             light.enabled = lit;
         }
+        var particleSystem = GetComponentInChildren<ParticleSystem>();
+        particleSystem.gameObject.SetActive(lit);
     }
 
 
