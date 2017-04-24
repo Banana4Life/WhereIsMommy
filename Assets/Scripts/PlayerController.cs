@@ -36,13 +36,12 @@ public class PlayerController : MonoBehaviour
     {
         var rand = new Random(DateTime.Now.Millisecond);
         combination = new List<char> {'A', 'B', 'C'}.OrderBy(a => rand.Next()).ToList();
+        Debug.Log("The Combination is: " + combination[0]+ combination[1] + combination[2]);
         int i = 0;
-        foreach (var btn in GameObject.FindGameObjectsWithTag("Button"))
-        {
-            var buttonController = btn.GetComponent<ButtonController>();
-            buttonController.SetButtonLetter(combination[i]);
-            i++;
-        }
+        var buttons = GameObject.FindGameObjectsWithTag("Button");
+        buttons[0].GetComponent<ButtonController>().SetButtonLetter('A');
+        buttons[1].GetComponent<ButtonController>().SetButtonLetter('B');
+        buttons[2].GetComponent<ButtonController>().SetButtonLetter('C');
         forceMovement = false;
         buttonsPressed = 0;
         modelCycler = GetComponentInChildren<ModelCycler>();
@@ -61,7 +60,7 @@ public class PlayerController : MonoBehaviour
         if (combination[buttonsPressed] == letter)
         {
             buttonsPressed++;
-            Debug.Log("Correct");
+            Debug.Log(letter + " Correct");
             if (buttonsPressed == 3)
             {
                 Debug.Log("Exit is now Open");
@@ -70,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
             return true;
         }
-        Debug.Log("Wrong");
+        Debug.Log(letter + " Wrong");
         buttonsPressed = 0;
         return false;
     }
