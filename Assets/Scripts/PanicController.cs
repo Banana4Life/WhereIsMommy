@@ -67,7 +67,8 @@ public class PanicController : MonoBehaviour
                 else
                 {
                     TextController.Get().ShowText("It's too dark. I need my Teddy!", TextController.red, 4f);
-                    playerCtrl.voiceSource.PlayOneShot(panicTeddy);
+                    playerCtrl.voiceSource.PlayOneShot(panicDark2);
+                    Invoke("TeddyPanic", 1.5f);
                 }
                 playerCtrl.ForceMovement(ReturnTo.transform.position);
                 playerCtrl.Panic = true;
@@ -85,6 +86,12 @@ public class PanicController : MonoBehaviour
             }
         }
     }
+
+    private void TeddyPanic()
+    {
+        GetComponent<PlayerController>().voiceSource.PlayOneShot(panicTeddy);
+    }
+
 
     private void UpdateHeartbeatVolume()
     {
