@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
+﻿using UnityEngine;
 public class TeddyController : CollisionController
 {
     private float teddyTextTimeLeft = 0;

@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class SweetsController : CollisionController
+﻿public class SweetsController : CollisionController
 {
 
     private PlayerController pc;
