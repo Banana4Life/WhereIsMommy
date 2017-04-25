@@ -12,6 +12,7 @@ public class IntroController : MonoBehaviour
 	void Start ()
 	{
 	    timeLeft = 3f;
+	    GetComponent<AudioSource>().Play();
 	}
 	
 	// Update is called once per frame

@@ -20,6 +20,8 @@ public class IntroScript : MonoBehaviour
     public GameObject Destination;
     private Vector3 origin;
 
+    private bool soundPlayed;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -48,7 +50,13 @@ public class IntroScript : MonoBehaviour
 	            }
 	            break;
             case IntroState.MotherTalking:
-                TextController.Get().ShowText("Do not leave the room. We are back soon.", new Color(150/255f, 193/255f, 72/255f), 3f);
+                TextController.Get().ShowText("Stay in your room. We will back soon.", new Color(150/255f, 193/255f, 72/255f), 3f);
+                if (!soundPlayed)
+                {
+                    soundPlayed = true;
+                    GetComponent<AudioSource>().Play();
+                }
+
                 timeLeft -= Time.deltaTime;
                 if (timeLeft <= 0)
                 {
