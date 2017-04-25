@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        AudioListener.volume = 0.5f;
         var rand = new Random(DateTime.Now.Millisecond);
         combination = new List<char> {'A', 'B', 'C'}.OrderBy(a => rand.Next()).ToList();
         Debug.Log("The Combination is: " + combination[0]+ combination[1] + combination[2]);
