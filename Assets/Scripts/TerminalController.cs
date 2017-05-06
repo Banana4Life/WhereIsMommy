@@ -14,6 +14,8 @@
     {
         TextController.Get().ShowText("It reads: " + pc.combination[0] + " "
                                                    + pc.combination[1] + " "
-                                                   + pc.combination[2], TextController.red, 10f);
+                                                   + pc.combination[2] + " "
+                                                   + pc.combination[3],
+            TextController.red, 10f);
     }
 }
