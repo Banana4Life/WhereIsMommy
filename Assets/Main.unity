@@ -8219,6 +8219,78 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1001 &1011077016
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -21.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -21.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.96751094
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.25282934
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: bigDoor
+      value: 
+      objectReference: {fileID: 1921971980}
+    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: bigDoorPlane
+      value: 
+      objectReference: {fileID: 1669155117}
+    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: bigDoorSpotlight
+      value: 
+      objectReference: {fileID: 633644554}
+    - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: ReturnTo
+      value: 
+      objectReference: {fileID: 676812400}
+    - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: musicSource
+      value: 
+      objectReference: {fileID: 1659018934}
+    - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1659018932}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1016719623
 Prefab:
   m_ObjectHideFlags: 0
@@ -15108,98 +15180,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.1, y: 1.41, z: 4.58}
   m_Center: {x: -0.100000024, y: 0.6, z: 0.100000024}
---- !u!1001 &1831903544
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -21.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -21.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.96751094
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.25282934
-      objectReference: {fileID: 0}
-    - target: {fileID: 4862397493011524, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1659018932}
-    - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: ReturnTo
-      value: 
-      objectReference: {fileID: 676812400}
-    - target: {fileID: 114086110393262488, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: musicSource
-      value: 
-      objectReference: {fileID: 1659018934}
-    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: bigDoor
-      value: 
-      objectReference: {fileID: 1921971980}
-    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: bigDoorPlane
-      value: 
-      objectReference: {fileID: 1669155117}
-    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: bigDoorSpotlight
-      value: 
-      objectReference: {fileID: 633644554}
-    - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: camOffset.y
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: rotationSpeed
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: camOffset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
-        type: 2}
-      propertyPath: camOffset.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1837308607
 GameObject:
   m_ObjectHideFlags: 0
