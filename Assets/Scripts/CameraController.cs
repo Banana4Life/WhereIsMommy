@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
 	{
 	    var newPos = gameObject.transform.position;
 	    newPos += camOffset;
-	    cam.transform.position = newPos;
+	    cam.transform.parent.transform.position = newPos;
 
 	    RaycastHit hit;
 	    var playerPos = transform.position;

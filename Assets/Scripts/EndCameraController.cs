@@ -58,6 +58,9 @@ public class EndCameraController : MonoBehaviour
 	                creditBlend.GetComponent<Image>().color = new Color(oldColor.r, oldColor.g, oldColor.b, Mathf.Min(0.7f - creditBlendTime, 0.7f) / 0.7f);
 	                if (creditBlendTime < 0)
 	                {
+	                    Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+	                    Cursor.visible = true;
+	                    Cursor.lockState = CursorLockMode.None;
 	                    text.SetActive(true);
 	                    restartButton.SetActive(true);
 	                    exitButton.SetActive(true);
