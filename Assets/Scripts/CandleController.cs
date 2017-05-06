@@ -38,11 +38,23 @@ public class CandleController : CollisionController
                 lit = true;
                 UpdateLight();
                 audioSource.Play();
-                TextController.Get().ShowText("Finally some light!", TextController.red, 4f);
+                var matchCount = playerController.Carry().carryMatches;
+                if (matchCount == 1)
+                {
+                    TextController.Get().ShowText("Only one match left!", TextController.red, 4f);
+                }
+                else if (matchCount == 0)
+                {
+                    TextController.Get().ShowText("Thats was my last match!", TextController.red, 4f);
+                }
+                else
+                {
+                    TextController.Get().ShowText("Finally some light! " + matchCount + " matches left.", TextController.red, 4f);
+                }
             }
             else
             {
-                TextController.Get().ShowText("This candle is no match for me!", TextController.red, 4f);
+                TextController.Get().ShowText("I need more matches!", TextController.red, 4f);
             }
         }
         if (lit)

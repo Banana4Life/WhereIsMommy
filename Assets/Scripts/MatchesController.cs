@@ -9,8 +9,16 @@ public class MatchesController : CollisionController
     {
         PlaySound(playerController);
         gameObject.SetActive(false);
+
+        if (playerController.Carry().carryMatches == 0)
+        {
+            TextController.Get().ShowText("Hmm more matches. (+" + amount + " matches)", TextController.red, 4f);
+        }
+        else
+        {
+            TextController.Get().ShowText("Now I can light a candle. (+" + amount + " matches)", TextController.red, 4f);
+        }
         playerController.Carry().carryMatches += amount;
-        TextController.Get().ShowText("Now I can light a candle", TextController.red, 4f);
     }
 
     private void PlaySound(PlayerController player)
