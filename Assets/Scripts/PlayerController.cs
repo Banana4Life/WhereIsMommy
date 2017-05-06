@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using Random = System.Random;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip[] stepSounds;
 
-    private static readonly char[] charSet = {'A', 'B', 'C', 'D'};
+    public static readonly char[] charSet = {'A', 'B', 'C', 'D'};
     public char[] combination;
     public int buttonsPressed = 0;
 
@@ -166,7 +167,7 @@ public class PlayerController : MonoBehaviour
 
         if (!forceMovement)
         {
-            RotateToMouse();
+            Rotate();
 
             var x = Input.GetAxisRaw("Horizontal");
             var y = Input.GetAxisRaw("Vertical");
@@ -253,40 +254,21 @@ public class PlayerController : MonoBehaviour
         velocity = (int)Math.Max(rigidBody.velocity.magnitude, navAgent.velocity.magnitude);
     }
 
-    private Ray ray;
-
-    private void RotateToMouse()
+    private void Rotate()
     {
-        // Mouse input if mouse moved
-        if (Mathf.Abs(Input.GetAxisRaw("Mouse X")) > 0 || Mathf.Abs(Input.GetAxisRaw("Mouse Y")) > 0)
+        var mouseMovement = Input.GetAxisRaw("Mouse X");
+        var rightStickMovement = Input.GetAxisRaw("Right Stick X Axis");
+        var movement = rightStickMovement;
+        if (Mathf.Abs(mouseMovement) > Mathf.Abs(rightStickMovement))
         {
-            RaycastHit hit;
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //Debug.DrawLine(ray.origin, gameObject.transform.position, Color.red);
-            if (Physics.Raycast(ray, out hit, 1000, 1 << 9)) // Level 9 = Floor
-            {
-                var hitPoint = hit.point;
-                hitPoint.y = transform.position.y;
-                targetRotation = Quaternion.LookRotation(hitPoint - transform.position);
-            }
+            movement = mouseMovement;
         }
-
-        // Controller input if right stick is used
-        var controllerX = Input.GetAxis("Right Stick X Axis");
-        var controllerY = Input.GetAxis("Right Stick Y Axis");
-        if (Mathf.Abs(controllerX) > 0 || Mathf.Abs(controllerY) > 0)
-        {
-            targetRotation = Quaternion.LookRotation(new Vector3(controllerX, 0, controllerY));
-        }
-
-        var horizontal = Input.GetAxisRaw("Mouse X");
-        var vertical = Input.GetAxisRaw("Mouse Y");
 
         var camWagon = GetComponent<CameraController>().cam.transform.parent;
-        camWagon.transform.RotateAround(transform.position, Vector3.up, horizontal * camRotationSpeed * Time.deltaTime);
+        camWagon.RotateAround(transform.position, Vector3.up, movement * camRotationSpeed * Time.deltaTime);
         //gameObject.transform.RotateAround(transform.position, Vector3.Cross(transform.forward, Vector3.up), vertical * RotationSpeed * Time.deltaTime);
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, camWagon.transform.rotation, rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, camWagon.rotation, rotationSpeed * Time.deltaTime);
     }
 
     public void StopForceMovement()
