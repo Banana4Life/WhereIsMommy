@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip[] stepSounds;
 
-    public List<char> combination;
+    private static readonly char[] charSet = {'A', 'B', 'C', 'D'};
+    public char[] combination;
     public int buttonsPressed = 0;
 
     private ModelCycler modelCycler;
@@ -58,10 +59,10 @@ public class PlayerController : MonoBehaviour
     {
         AudioListener.volume = 0.5f;
         var rand = new Random(DateTime.Now.Millisecond);
-        combination = new List<char> {'A', 'B', 'C', 'D'}.OrderBy(a => rand.Next()).ToList();
-        Debug.Log("The Combination is: " + combination[0]+ combination[1] + combination[2] + combination[3]);
+        combination = charSet.OrderBy(a => rand.Next()).ToArray();
+        Debug.Log("The Combination is: " + GetCombinationString());
         var buttons = GameObject.FindGameObjectsWithTag("Button");
-        for (var i = 0; i < combination.Count; ++i)
+        for (var i = 0; i < combination.Length; ++i)
         {
             buttons[i].GetComponent<ButtonController>().SetButtonLetter(combination[i]);
         }
@@ -73,6 +74,11 @@ public class PlayerController : MonoBehaviour
         carry = GetComponent<CarryScript>();
         trail = GameObject.Find("Trail");
         bloodyTrail = false;
+    }
+
+    public string GetCombinationString()
+    {
+        return string.Join(" ", combination);
     }
 
     private void OnModelCycle(int index)
