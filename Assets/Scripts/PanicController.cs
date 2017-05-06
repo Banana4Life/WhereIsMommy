@@ -73,6 +73,7 @@ public class PanicController : MonoBehaviour
                 playerCtrl.ForceMovement(ReturnTo.transform.position);
                 playerCtrl.Panic = true;
             }
+
         }
         else
         {

@@ -49,7 +49,7 @@ public class IntroScript : MonoBehaviour
 	            }
 	            break;
             case IntroState.MotherTalking:
-                TextController.Get().ShowText("Stay in your room. We will back soon.", new Color(150/255f, 193/255f, 72/255f), 3f);
+                TextController.Get().ShowText("Stay in your room. We will be back soon.", new Color(150/255f, 193/255f, 72/255f), 3f);
                 if (!soundPlayed)
                 {
                     soundPlayed = true;
