@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 using Random = System.Random;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public bool Panic = false;
     public AudioMixer mixer;
     public int rotationSpeed = 250;
+    public int camRotationSpeed = 150;
     public GameObject trailPrefab;
     public bool bloodyTrail;
 
@@ -57,6 +59,12 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        if (!Application.isEditor)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
         AudioListener.volume = 0.5f;
         var rand = new Random(DateTime.Now.Millisecond);
         combination = charSet.OrderBy(a => rand.Next()).ToArray();
@@ -168,7 +176,8 @@ public class PlayerController : MonoBehaviour
             {
                 if (velocity < (sugarRush ? maxHighVelocity : maxVelocity))
                 {
-                    rigidBody.AddForce(new Vector3(x, 0, y).normalized * Thrust * Time.deltaTime);
+                    var dir = transform.TransformDirection(new Vector3(x, 0, y).normalized);
+                    rigidBody.AddForce(dir * Thrust * Time.deltaTime);
                 }
                 // else ignore
             }
@@ -185,6 +194,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             if (canClose)
             {
                 Application.Quit();
@@ -201,6 +212,12 @@ public class PlayerController : MonoBehaviour
     private void DoNotClose()
     {
         canClose = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        if (Application.isEditor)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        Cursor.visible = false;
     }
 
     private void UpdateSound()
@@ -263,7 +280,14 @@ public class PlayerController : MonoBehaviour
             targetRotation = Quaternion.LookRotation(new Vector3(controllerX, 0, controllerY));
         }
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        var horizontal = Input.GetAxisRaw("Mouse X");
+        var vertical = Input.GetAxisRaw("Mouse Y");
+
+        var camWagon = GetComponent<CameraController>().cam.transform.parent;
+        camWagon.transform.RotateAround(transform.position, Vector3.up, horizontal * camRotationSpeed * Time.deltaTime);
+        //gameObject.transform.RotateAround(transform.position, Vector3.Cross(transform.forward, Vector3.up), vertical * RotationSpeed * Time.deltaTime);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, camWagon.transform.rotation, rotationSpeed * Time.deltaTime);
     }
 
     public void StopForceMovement()

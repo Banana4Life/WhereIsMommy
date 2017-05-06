@@ -1591,7 +1591,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   tilt: 0
   tiltSpeed: 10
-  camOffset: {x: -0.18, y: 8.72, z: -3}
+  camOffset: {x: 0, y: 12, z: 0}
   untiltedOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &114086110393262488
 MonoBehaviour:
@@ -1659,6 +1659,7 @@ MonoBehaviour:
   Panic: 0
   mixer: {fileID: 24100000, guid: 0617be51ef9ae4d50b5c241f5650e6c4, type: 2}
   rotationSpeed: 250
+  camRotationSpeed: 150
   trailPrefab: {fileID: 1420461109215536, guid: 94fe0c60d8b6d4f4ca62c05a69de22e0,
     type: 2}
   bloodyTrail: 0

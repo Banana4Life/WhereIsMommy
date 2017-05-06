@@ -2636,6 +2636,35 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &271143977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 271143978}
+  m_Layer: 0
+  m_Name: CameraWagon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &271143978
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 271143977}
+  m_LocalRotation: {x: 0, y: -0.96751094, z: 0, w: 0.25282934}
+  m_LocalPosition: {x: -21.53, y: 12, z: -21.65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1659018933}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -150.71, z: 0}
 --- !u!1 &276570102
 GameObject:
   m_ObjectHideFlags: 0
@@ -13368,13 +13397,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1659018928}
-  m_LocalRotation: {x: 0.54256654, y: 0.07309499, z: -0.04746844, w: 0.8354792}
-  m_LocalPosition: {x: -24, y: 9.8, z: -23.8}
+  m_LocalRotation: {x: 0.5328763, y: 0, z: 0, w: 0.8461932}
+  m_LocalPosition: {x: 0, y: 0, z: -4.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 271143978}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 66, y: 10, z: 0}
+  m_LocalEulerAnglesHint: {x: 64.4, y: 0, z: 0}
 --- !u!82 &1659018934
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15148,6 +15177,26 @@ Prefab:
       propertyPath: bigDoorSpotlight
       value: 
       objectReference: {fileID: 633644554}
+    - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: camOffset.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250885029735736, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: rotationSpeed
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: camOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114082067899699048, guid: 1c07278cd5d5249b7af2f5a1c846c058,
+        type: 2}
+      propertyPath: camOffset.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c07278cd5d5249b7af2f5a1c846c058, type: 2}
   m_IsPrefabParent: 0
