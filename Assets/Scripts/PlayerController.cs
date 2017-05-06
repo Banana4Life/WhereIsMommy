@@ -61,10 +61,10 @@ public class PlayerController : MonoBehaviour
         combination = new List<char> {'A', 'B', 'C', 'D'}.OrderBy(a => rand.Next()).ToList();
         Debug.Log("The Combination is: " + combination[0]+ combination[1] + combination[2] + combination[3]);
         var buttons = GameObject.FindGameObjectsWithTag("Button");
-        buttons[0].GetComponent<ButtonController>().SetButtonLetter('A');
-        buttons[1].GetComponent<ButtonController>().SetButtonLetter('B');
-        buttons[2].GetComponent<ButtonController>().SetButtonLetter('C');
-        buttons[3].GetComponent<ButtonController>().SetButtonLetter('D');
+        for (var i = 0; i < combination.Count; ++i)
+        {
+            buttons[i].GetComponent<ButtonController>().SetButtonLetter(combination[i]);
+        }
         forceMovement = false;
         buttonsPressed = 0;
         modelCycler = GetComponentInChildren<ModelCycler>();
