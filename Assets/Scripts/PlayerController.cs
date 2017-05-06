@@ -78,12 +78,11 @@ public class PlayerController : MonoBehaviour
 
     public string GetCombinationString()
     {
-        return string.Join(" ", combination);
+        return string.Join(" ", combination.Select(c => "" + c).ToArray());
     }
 
     private void OnModelCycle(int index)
     {
-        Debug.Log("Model Index: " + index);
         AudioClip clip;
         if (index == 1)
         {
@@ -125,7 +124,7 @@ public class PlayerController : MonoBehaviour
         {
             buttonsPressed++;
             Debug.Log(letter + " Correct");
-            if (buttonsPressed == 3)
+            if (buttonsPressed == charSet.Length)
             {
                 Debug.Log("Exit is now Open");
                 bigDoor.GetComponentInChildren<MeshFilter>().mesh = bigDoorOpen;
