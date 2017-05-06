@@ -12,11 +12,11 @@ public class MatchesController : CollisionController
 
         if (playerController.Carry().carryMatches == 0)
         {
-            TextController.Get().ShowText("Hmm more matches. (+" + amount + " matches)", TextController.red, 4f);
+            TextController.Get().ShowText("Now I can light a candle. (+" + amount + " matches)", TextController.red, 4f);
         }
         else
         {
-            TextController.Get().ShowText("Now I can light a candle. (+" + amount + " matches)", TextController.red, 4f);
+            TextController.Get().ShowText("Hmm more matches. (+" + amount + " matches)", TextController.red, 4f);
         }
         playerController.Carry().carryMatches += amount;
     }
