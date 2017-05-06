@@ -56,9 +56,12 @@ public class PlayerController : MonoBehaviour
 
     private Quaternion targetRotation;
 
+    public Texture2D cursor;
+
     // Use this for initialization
     void Start()
     {
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         if (!Application.isEditor)
         {
             Cursor.visible = false;
@@ -205,6 +208,7 @@ public class PlayerController : MonoBehaviour
                 canClose = true;
                 Invoke("DoNotClose", 5f);
             }
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
     }
 
@@ -215,6 +219,10 @@ public class PlayerController : MonoBehaviour
         if (Application.isEditor)
         {
             Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         }
         Cursor.visible = false;
     }

@@ -367,7 +367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1968217847676562
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +517,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1014065654175466}
   m_LocalRotation: {x: 0.42164153, y: -0.013221229, z: -0.0037158942, w: 0.90665865}
-  m_LocalPosition: {x: 0.58, y: 3.77, z: -1.6}
+  m_LocalPosition: {x: 0.36, y: 4.38, z: -0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4923122286860396}
@@ -612,7 +612,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1599955060207938}
   m_LocalRotation: {x: 0.42164153, y: -0.013221229, z: -0.0037158942, w: 0.90665865}
-  m_LocalPosition: {x: 0.58, y: 3.77, z: -1.6}
+  m_LocalPosition: {x: 0.58, y: 4.25, z: -1.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4058918778176534}
@@ -1610,6 +1610,7 @@ MonoBehaviour:
   bigDoorOpen: {fileID: 4300000, guid: 19218c26df8fcc7499e5b97dd9e90839, type: 3}
   bigDoorPlane: {fileID: 0}
   bigDoorSpotlight: {fileID: 0}
+  cursor: {fileID: 2800000, guid: 0c72d9524e6ce42309421cffaff969d3, type: 3}
 --- !u!114 &114601227292072094
 MonoBehaviour:
   m_ObjectHideFlags: 1
