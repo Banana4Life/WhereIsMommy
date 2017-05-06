@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         AudioListener.volume = 0.5f;
         var rand = new Random(DateTime.Now.Millisecond);
         combination = new List<char> {'A', 'B', 'C', 'D'}.OrderBy(a => rand.Next()).ToList();
-        Debug.Log("The Combination is: " + combination[0]+ combination[1] + combination[2]);
+        Debug.Log("The Combination is: " + combination[0]+ combination[1] + combination[2] + combination[3]);
         var buttons = GameObject.FindGameObjectsWithTag("Button");
         buttons[0].GetComponent<ButtonController>().SetButtonLetter('A');
         buttons[1].GetComponent<ButtonController>().SetButtonLetter('B');
